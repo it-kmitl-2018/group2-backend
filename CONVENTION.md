@@ -1,4 +1,4 @@
-# group2
+# Group 2
 ### Based on Java
 - **การเว้นบรรทัด** : เมื่อเจอ Loop หรือก่อนขึ้น Method ใหม่ให้เว้น 1 บรรทัด
 - **การเคาะ White Space** ตาม Autocomplete ของ Java
@@ -18,4 +18,4 @@
 - **ปีกกา**  :  ก่อน { ให้เว้น space 1 ครั้ง และหลังจบ } ให้เว้น 1 บรรทัด 
 - ขึ้นบรรทัดใหม่ทุกๆ ปีกกาเปิดปิด { , }
 
-IDE : IntelliJ Idea
+- **IDE** : IntelliJ Idea

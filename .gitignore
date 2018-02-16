@@ -1,11 +1,17 @@
-out/
-.gradle
+### Generated ###
 build/
+out/
+
+### Gradle ###
+.gradle
 !gradle/wrapper/gradle-wrapper.jar
 
 ### IntelliJ IDEA ###
 .idea
-*.ipr
+*.iws
 *.iml
+*.ipr
 
+### macOS ###
 .DS_Store
+

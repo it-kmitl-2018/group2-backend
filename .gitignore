@@ -2,6 +2,10 @@
 build/
 out/
 
+### Java ###
+*.class
+*.jar
+
 ### Gradle ###
 .gradle
 !gradle/wrapper/gradle-wrapper.jar

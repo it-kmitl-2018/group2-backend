@@ -24,3 +24,10 @@
 - ขึ้นบรรทัดใหม่ทุกๆ ปีกกาเปิดปิด { , }
 
 - **IDE**: IntelliJ IDEA
+
+
+## Versioning
+
+รัน version ตาม [Sematic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html) แต่ไม่ใช้ pre-release version (เช่น alpha, beta)
+
+

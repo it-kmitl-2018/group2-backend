@@ -2,6 +2,8 @@ buildscript {
 	ext {
 		springBootVersion = '1.5.10.RELEASE'
 		junitVersion = '5.1.0'
+		lombokVersion = '0.9.2'
+		jacksonVersion = '2.9.4'
 	}
 	repositories {
 		mavenCentral()
@@ -24,7 +26,11 @@ repositories {
 
 dependencies {
 	compile 'org.springframework.boot:spring-boot-starter-web'
+	compile 'org.springframework.boot:spring-boot-devtools'
 	testCompile 'org.springframework.boot:spring-boot-starter-test'
+
+	compile "org.projectlombok:lombok:${lombokVersion}"
+	compile "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:${jacksonVersion}"
 
 	testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
 	testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"

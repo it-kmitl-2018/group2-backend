@@ -1,10 +1,10 @@
 package th.ac.kmitl.soa.group2.models.supplychaintradetransaction;
 
-public class PhoneUniversalModel {
+public class PhoneNumberModel {
 
     public String phoneNumber;
 
-    public PhoneUniversalModel(String phoneNumber) {
+    public PhoneNumberModel(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

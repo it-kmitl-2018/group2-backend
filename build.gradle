@@ -1,12 +1,15 @@
 buildscript {
 	ext {
 		springBootVersion = '1.5.10.RELEASE'
+		junitVersion = '5.1.0'
+		lombokVersion = '1.16.20'
+		jacksonVersion = '2.9.4'
 	}
 	repositories {
 		mavenCentral()
 	}
 	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
 	}
 }
 
@@ -21,7 +24,28 @@ repositories {
 	mavenCentral()
 }
 
+sourceSets {
+	main.java.srcDirs += 'src'
+	main.resources.srcDirs += 'src'
+	test.java.srcDirs += 'test'
+	test.resources.srcDirs += 'test'
+}
+
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-web')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+	compile 'org.springframework.boot:spring-boot-starter-web'
+	compile 'org.springframework.boot:spring-boot-devtools'
+	compile "org.projectlombok:lombok:${lombokVersion}"
+	compile "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:${jacksonVersion}"
+
+	testCompile 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+	testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+}
+
+test {
+	useJUnitPlatform()
+	dependsOn 'cleanTest'
+	testLogging {
+		events "passed", "skipped", "failed"
+	}
 }

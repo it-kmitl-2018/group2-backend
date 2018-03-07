@@ -9,7 +9,7 @@ import static th.ac.kmitl.soa.group2.utils.XmlFormatter.serialize;
 
 public class DocumentHeaderTest {
 
-    private static final DocumentHeader exchangedDocument =
+    private static final DocumentHeader documentHeader =
         new DocumentHeader(
             "RDTIV0575526000058001",
             "ใบกำกับภาษี",
@@ -35,7 +35,7 @@ public class DocumentHeaderTest {
 
     @Test
     public void shouldCreateCorrectXml() {
-        assertEquals(serialize(exchangedDocument).get(), xml);
+        assertEquals(serialize(documentHeader).get(), xml);
     }
 
 }

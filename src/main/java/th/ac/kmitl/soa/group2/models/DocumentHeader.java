@@ -34,4 +34,6 @@ class DocumentHeader {
     @JacksonXmlProperty(localName = "ram:CreationDateTime")
     public final Timestamp createdAt;
 
+    // TODO: Add IncludedNote field
+
 }

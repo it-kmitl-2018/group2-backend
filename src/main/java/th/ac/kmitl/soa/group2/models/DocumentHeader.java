@@ -2,33 +2,36 @@ package th.ac.kmitl.soa.group2.models;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import lombok.RequiredArgsConstructor;
+
 import java.sql.Timestamp;
 
 @JacksonXmlRootElement(localName = "rsm:ExchangedDocument")
-public class ExchangedDocumentModel {
+@RequiredArgsConstructor()
+class DocumentHeader {
 
     @JacksonXmlProperty(localName = "ram:ID")
-    public String id;
+    public final String id;
 
     @JacksonXmlProperty(localName = "ram:Name")
-    public String name;
+    public final String name;
 
     @JacksonXmlProperty(localName = "ram:TypeCode")
-    public String typeCode;
+    public final String typeCode;
 
     @JacksonXmlProperty(localName = "ram:IssueDateTime")
-    public Timestamp issueDateTime;
+    public final Timestamp issuedAt;
 
     @JacksonXmlProperty(localName = "ram:Purpose")
-    public String purpose;
+    public final String purpose;
 
     @JacksonXmlProperty(localName = "ram:PurposeCode")
-    public String purposeCode;
+    public final String purposeCode;
 
     @JacksonXmlProperty(localName = "ram:GlobalID")
-    public String globalId;
+    public final String globalId;
 
     @JacksonXmlProperty(localName = "ram:CreationDateTime")
-    public Timestamp creationDateTime;
+    public final Timestamp createdAt;
 
 }

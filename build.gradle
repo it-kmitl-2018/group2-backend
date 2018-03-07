@@ -4,6 +4,7 @@ buildscript {
 		junitVersion = '5.1.0'
 		lombokVersion = '1.16.20'
 		jacksonVersion = '2.9.4'
+		vavrVersion = '0.9.2'
 	}
 	repositories {
 		mavenCentral()
@@ -24,18 +25,12 @@ repositories {
 	mavenCentral()
 }
 
-sourceSets {
-	main.java.srcDirs += 'src'
-	main.resources.srcDirs += 'src'
-	test.java.srcDirs += 'test'
-	test.resources.srcDirs += 'test'
-}
-
 dependencies {
 	compile 'org.springframework.boot:spring-boot-starter-web'
 	compile 'org.springframework.boot:spring-boot-devtools'
 	compile "org.projectlombok:lombok:${lombokVersion}"
 	compile "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:${jacksonVersion}"
+	compile "io.vavr:vavr:${vavrVersion}"
 
 	testCompile 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"

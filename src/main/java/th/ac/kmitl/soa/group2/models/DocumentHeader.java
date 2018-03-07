@@ -6,8 +6,8 @@ import lombok.RequiredArgsConstructor;
 
 import java.sql.Timestamp;
 
-@JacksonXmlRootElement(localName = "rsm:ExchangedDocument")
 @RequiredArgsConstructor()
+@JacksonXmlRootElement(localName = "rsm:ExchangedDocument")
 class DocumentHeader {
 
     @JacksonXmlProperty(localName = "ram:ID")

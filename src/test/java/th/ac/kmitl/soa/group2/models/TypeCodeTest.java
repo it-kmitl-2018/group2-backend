@@ -19,7 +19,7 @@ public class TypeCodeTest {
     private final String CANCELLATION_NOTE_CODE = "T07";
 
     @Test
-    public void shouldReturnCorrectCode() {
+    public void shouldHaveTheCorrectCode() {
         assertEquals(TypeCode.DEBIT_NOTE.getTypeCode(), DEBIT_NOTE_CODE);
         assertEquals(TypeCode.CREDIT_NOTE.getTypeCode(), CREDIT_NOTE_CODE);
         assertEquals(TypeCode.INVOICE.getTypeCode(), INVOICE_CODE);

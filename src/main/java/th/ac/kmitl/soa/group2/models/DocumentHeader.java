@@ -8,7 +8,7 @@ import java.sql.Timestamp;
 
 @RequiredArgsConstructor()
 @JacksonXmlRootElement(localName = "rsm:ExchangedDocument")
-class DocumentHeader {
+class DocumentHeaderModel {
 
     @JacksonXmlProperty(localName = "ram:ID")
     public final String id;

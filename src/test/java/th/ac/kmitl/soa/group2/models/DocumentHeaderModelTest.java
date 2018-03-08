@@ -7,13 +7,13 @@ import java.sql.Timestamp;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static th.ac.kmitl.soa.group2.utils.XmlFormatter.serialize;
 
-public class HeaderModelTest {
+public class DocumentHeaderModelTest {
 
-     public static final HeaderModel model =
-        new HeaderModel(
+     public static final DocumentHeaderModel model =
+        new DocumentHeaderModel(
             "RDTIV0575526000058001",
             "ใบกำกับภาษี",
-            TypeCode.TAX_INVOICE.getTypeCode(),
+            DocumentType.TAX_INVOICE.typeCode,
             new Timestamp(1520396640256L),
             "คำนวณราคาค่าบริการผิดพลาดสูงกว่าที่เป็นจริง",
             "DCNS03",

@@ -10,7 +10,7 @@ import static th.ac.kmitl.soa.group2.definitions.XmlTags.*;
 
 @RequiredArgsConstructor()
 @JacksonXmlRootElement(localName = EXCHANGED_DOCUMENT)
-public class HeaderModel {
+public class DocumentHeaderModel {
 
     @JacksonXmlProperty(localName = ID)
     public final String id;

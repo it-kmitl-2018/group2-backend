@@ -1,14 +1,14 @@
 package th.ac.kmitl.soa.group2.controllers;
 
-import io.vavr.Function1;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import th.ac.kmitl.soa.group2.controllers.responses.Success;
+import th.ac.kmitl.soa.group2.forms.HeaderForm;
 import th.ac.kmitl.soa.group2.forms.TaxInvoiceForm;
-import th.ac.kmitl.soa.group2.models.HeaderModel;
+import th.ac.kmitl.soa.group2.models.DocumentType;
+import th.ac.kmitl.soa.group2.models.DocumentHeaderModel;
 import th.ac.kmitl.soa.group2.models.TaxInvoiceModel;
-import th.ac.kmitl.soa.group2.utils.XmlFormatter;
 
 import javax.validation.Valid;
 import java.sql.Timestamp;
@@ -20,15 +20,18 @@ public class TaxInvoiceController {
 
     @PostMapping(value = "/tax-invoice/generate")
     public Success<String> generate(@Valid @RequestBody TaxInvoiceForm taxInvoiceForm) {
+        // TODO: Require refactoring
+        HeaderForm headerForm = taxInvoiceForm.header;
         TaxInvoiceModel taxInvoice = new TaxInvoiceModel(
-            new HeaderModel(
-                taxInvoiceForm.header.id,
-                "name from typeCode",
-                taxInvoiceForm.header.typeCode,
-                taxInvoiceForm.header.issuedAt,
-                "purpose from purposeCode",
-                taxInvoiceForm.header.purposeCode,
-                taxInvoiceForm.header.globalId,
+            new DocumentHeaderModel(
+                headerForm.id,
+                DocumentType.from(headerForm.typeCode).get().typeCode,
+                headerForm.typeCode,
+                headerForm.issuedAt,
+                // TODO: create purpose code mapper
+                "can be created from purpose code",
+                headerForm.purposeCode,
+                headerForm.globalId,
                 new Timestamp(System.currentTimeMillis())
             )
         );

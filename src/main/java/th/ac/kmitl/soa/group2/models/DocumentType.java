@@ -1,6 +1,12 @@
 package th.ac.kmitl.soa.group2.models;
 
-public enum TypeCode {
+import io.vavr.collection.List;
+import io.vavr.control.Option;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
+public enum DocumentType {
 
     DEBIT_NOTE("80", "ใบเพิ่มหนี้ (Debit note)"),
     CREDIT_NOTE("81", "ใบลดหนี้ (Credit note)"),
@@ -14,20 +20,15 @@ public enum TypeCode {
     RECEIPT_AND_ABBREVIATED_TAX_INVOICE("T06", "ใบเสร็จรับเงิน/ใบกํากับภําษีอย่างย่อ (Receipt/Abbreviated Tax Invoice)"),
     CANCELLATION_NOTE("T07", "ใบแจ้งยกเลิก (Cancellation note)");
 
-    private final String typeCode;
-    private final String description;
+    public final String typeCode;
+    public final String description;
 
-    TypeCode(String typeCode, String description) {
-        this.typeCode = typeCode;
-        this.description = description;
+    public static Option<DocumentType> from(String typeCode) {
+        return getAllTypeCodes().find(documentType -> typeCode.equals(documentType.typeCode));
     }
 
-    public String getTypeCode() {
-        return typeCode;
-    }
-
-    public String getDescription() {
-        return description;
+    public static List<DocumentType> getAllTypeCodes() {
+        return List.of(DocumentType.values());
     }
 
 }

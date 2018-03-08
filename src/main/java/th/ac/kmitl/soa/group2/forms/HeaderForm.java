@@ -17,6 +17,8 @@ public class HeaderForm {
     @NotNull
     public String typeCode;
 
+    // TODO: Optional field
+    @NotNull
     public String purposeCode;
 
     @NotNull

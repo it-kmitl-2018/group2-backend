@@ -6,32 +6,34 @@ import lombok.RequiredArgsConstructor;
 
 import java.sql.Timestamp;
 
-@RequiredArgsConstructor()
-@JacksonXmlRootElement(localName = "rsm:ExchangedDocument")
-class DocumentHeaderModel {
+import static th.ac.kmitl.soa.group2.definitions.XmlTags.*;
 
-    @JacksonXmlProperty(localName = "ram:ID")
+@RequiredArgsConstructor()
+@JacksonXmlRootElement(localName = EXCHANGED_DOCUMENT)
+public class HeaderModel {
+
+    @JacksonXmlProperty(localName = ID)
     public final String id;
 
-    @JacksonXmlProperty(localName = "ram:Name")
+    @JacksonXmlProperty(localName = NAME)
     public final String name;
 
-    @JacksonXmlProperty(localName = "ram:TypeCode")
+    @JacksonXmlProperty(localName = TYPE_CODE)
     public final String typeCode;
 
-    @JacksonXmlProperty(localName = "ram:IssueDateTime")
+    @JacksonXmlProperty(localName = ISSUE_DATE_TIME)
     public final Timestamp issuedAt;
 
-    @JacksonXmlProperty(localName = "ram:Purpose")
+    @JacksonXmlProperty(localName = PURPOSE)
     public final String purpose;
 
-    @JacksonXmlProperty(localName = "ram:PurposeCode")
+    @JacksonXmlProperty(localName = PURPOSE_CODE)
     public final String purposeCode;
 
-    @JacksonXmlProperty(localName = "ram:GlobalID")
+    @JacksonXmlProperty(localName = GLOBAL_ID)
     public final String globalId;
 
-    @JacksonXmlProperty(localName = "ram:CreationDateTime")
+    @JacksonXmlProperty(localName = CREATION_DATE_TIME)
     public final Timestamp createdAt;
 
     // TODO: Add IncludedNote field

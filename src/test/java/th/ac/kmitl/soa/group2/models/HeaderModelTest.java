@@ -7,10 +7,10 @@ import java.sql.Timestamp;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static th.ac.kmitl.soa.group2.utils.XmlFormatter.serialize;
 
-public class DocumentHeaderModelTest {
+public class HeaderModelTest {
 
-    private static final DocumentHeaderModel documentHeader =
-        new DocumentHeaderModel(
+     public static final HeaderModel model =
+        new HeaderModel(
             "RDTIV0575526000058001",
             "ใบกำกับภาษี",
             TypeCode.TAX_INVOICE.getTypeCode(),
@@ -21,7 +21,7 @@ public class DocumentHeaderModelTest {
             new Timestamp(1520396612035L)
         );
 
-    private final String xml =
+     public static final String xml =
         "<rsm:ExchangedDocument>" +
             "<ram:ID>RDTIV0575526000058001</ram:ID>" +
             "<ram:Name>ใบกำกับภาษี</ram:Name>" +
@@ -35,7 +35,7 @@ public class DocumentHeaderModelTest {
 
     @Test
     public void shouldCreateCorrectXml() {
-        assertEquals(serialize(documentHeader).get(), xml);
+        assertEquals(serialize(model).get(), xml);
     }
 
 }

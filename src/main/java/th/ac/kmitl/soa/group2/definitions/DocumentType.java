@@ -1,8 +1,7 @@
-package th.ac.kmitl.soa.group2.models;
+package th.ac.kmitl.soa.group2.definitions;
 
 import io.vavr.collection.List;
 import io.vavr.control.Option;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

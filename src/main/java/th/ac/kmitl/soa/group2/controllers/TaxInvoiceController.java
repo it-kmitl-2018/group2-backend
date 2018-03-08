@@ -7,7 +7,7 @@ import th.ac.kmitl.soa.group2.controllers.responses.Success;
 import th.ac.kmitl.soa.group2.forms.HeaderForm;
 import th.ac.kmitl.soa.group2.forms.TaxInvoiceForm;
 import th.ac.kmitl.soa.group2.models.DocumentType;
-import th.ac.kmitl.soa.group2.models.DocumentHeaderModel;
+import th.ac.kmitl.soa.group2.models.HeaderModel;
 import th.ac.kmitl.soa.group2.models.TaxInvoiceModel;
 
 import javax.validation.Valid;
@@ -23,7 +23,7 @@ public class TaxInvoiceController {
         // TODO: Require refactoring
         HeaderForm headerForm = taxInvoiceForm.header;
         TaxInvoiceModel taxInvoice = new TaxInvoiceModel(
-            new DocumentHeaderModel(
+            new HeaderModel(
                 headerForm.id,
                 DocumentType.from(headerForm.typeCode).get().typeCode,
                 headerForm.typeCode,

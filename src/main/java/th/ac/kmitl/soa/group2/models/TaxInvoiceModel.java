@@ -12,6 +12,6 @@ import static th.ac.kmitl.soa.group2.definitions.XmlTags.EXCHANGED_DOCUMENT;
 public class TaxInvoiceModel {
 
     @JacksonXmlProperty(localName = EXCHANGED_DOCUMENT)
-    public final DocumentHeaderModel header;
+    public final HeaderModel header;
 
 }

@@ -8,11 +8,11 @@ import static th.ac.kmitl.soa.group2.utils.XmlFormatter.serialize;
 public class TaxInvoiceModelTest {
 
     public static final TaxInvoiceModel model =
-        new TaxInvoiceModel(DocumentHeaderModelTest.model);
+        new TaxInvoiceModel(HeaderModelTest.model);
 
     public static final String xml =
         "<rsm:CrossIndustryInvoice>" +
-            DocumentHeaderModelTest.xml +
+            HeaderModelTest.xml +
         "</rsm:CrossIndustryInvoice>";
 
     @Test

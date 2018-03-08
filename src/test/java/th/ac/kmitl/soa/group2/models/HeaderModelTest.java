@@ -7,10 +7,10 @@ import java.sql.Timestamp;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static th.ac.kmitl.soa.group2.utils.XmlFormatter.serialize;
 
-public class DocumentHeaderModelTest {
+public class HeaderModelTest {
 
-     public static final DocumentHeaderModel model =
-        new DocumentHeaderModel(
+     public static final HeaderModel model =
+        new HeaderModel(
             "RDTIV0575526000058001",
             "ใบกำกับภาษี",
             DocumentType.TAX_INVOICE.typeCode,

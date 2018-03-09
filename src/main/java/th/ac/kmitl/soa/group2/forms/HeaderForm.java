@@ -1,11 +1,13 @@
 package th.ac.kmitl.soa.group2.forms;
 
-import lombok.Data;
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
 
 import javax.validation.constraints.NotNull;
 import java.sql.Timestamp;
 
-@Data
+@Builder
+@EqualsAndHashCode
 public class HeaderForm {
 
     @NotNull
@@ -17,8 +19,6 @@ public class HeaderForm {
     @NotNull
     public String typeCode;
 
-    // TODO: Optional field
-    @NotNull
     public String purposeCode;
 
     @NotNull

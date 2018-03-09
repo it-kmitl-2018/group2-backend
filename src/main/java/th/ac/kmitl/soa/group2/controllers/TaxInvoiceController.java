@@ -13,7 +13,7 @@ import th.ac.kmitl.soa.group2.models.TaxInvoiceModel;
 import javax.validation.Valid;
 import java.sql.Timestamp;
 
-import static th.ac.kmitl.soa.group2.utils.XmlFormatter.serialize;
+import static th.ac.kmitl.soa.group2.utils.binders.XmlFormatter.serialize;
 
 @RestController
 public class TaxInvoiceController {

@@ -1,11 +1,13 @@
 package th.ac.kmitl.soa.group2.forms;
 
-import lombok.Data;
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-@Data
+@Builder
+@EqualsAndHashCode
 public class TaxInvoiceForm {
 
     @Valid @NotNull

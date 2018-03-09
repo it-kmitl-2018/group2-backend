@@ -5,7 +5,6 @@ buildscript {
 		lombokVersion = '1.16.20'
 		jacksonVersion = '2.9.4'
 		vavrVersion = '0.9.2'
-        jsonVersion = '20180130'
 	}
 	repositories {
 		jcenter()
@@ -35,7 +34,6 @@ dependencies {
 	compile "io.vavr:vavr:${vavrVersion}"
 
 	testCompile 'org.springframework.boot:spring-boot-starter-test'
-    testCompile "org.json:json:${jsonVersion}"
     testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
 	testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
 }

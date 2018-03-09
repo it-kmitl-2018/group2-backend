@@ -1,5 +1,6 @@
 package th.ac.kmitl.soa.group2.models;
 
+import io.vavr.control.Option;
 import org.junit.jupiter.api.Test;
 import th.ac.kmitl.soa.group2.definitions.DocumentType;
 import th.ac.kmitl.soa.group2.utils.binders.Xml;
@@ -16,9 +17,9 @@ public class HeaderModelTest {
             "ใบกำกับภาษี",
             DocumentType.TAX_INVOICE.typeCode,
             new Timestamp(1520396640256L),
-            "คำนวณราคาค่าบริการผิดพลาดสูงกว่าที่เป็นจริง",
-            "DCNS03",
-            "2.16.764.1.1.2.1.4.3.7",
+            Option.some("คำนวณราคาค่าบริการผิดพลาดสูงกว่าที่เป็นจริง"),
+            Option.some("DCNS03"),
+            Option.some("2.16.764.1.1.2.1.4.3.7"),
             new Timestamp(1520396612035L)
         );
 

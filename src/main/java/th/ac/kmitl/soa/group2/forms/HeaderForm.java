@@ -13,15 +13,15 @@ public class HeaderForm {
     public String id;
 
     @NotNull
-    public String globalId;
-
-    @NotNull
     public String typeCode;
 
     @NotNull
-    public Option<String> purposeCode;
+    public Timestamp issuedAt;
 
     @NotNull
-    public Timestamp issuedAt;
+    public Option<String> globalId;
+
+    @NotNull
+    public Option<String> purposeCode;
 
 }

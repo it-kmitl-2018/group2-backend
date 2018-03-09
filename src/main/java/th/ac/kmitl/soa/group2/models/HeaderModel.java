@@ -2,6 +2,7 @@ package th.ac.kmitl.soa.group2.models;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import io.vavr.control.Option;
 import lombok.Value;
 
 import java.sql.Timestamp;
@@ -25,13 +26,13 @@ public class HeaderModel {
     Timestamp issuedAt;
 
     @JacksonXmlProperty(localName = PURPOSE)
-    String purpose;
+    Option<String> purpose;
 
     @JacksonXmlProperty(localName = PURPOSE_CODE)
-    String purposeCode;
+    Option<String> purposeCode;
 
     @JacksonXmlProperty(localName = GLOBAL_ID)
-    String globalId;
+    Option<String> globalId;
 
     @JacksonXmlProperty(localName = CREATION_DATE_TIME)
     Timestamp createdAt;

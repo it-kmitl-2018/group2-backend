@@ -1,5 +1,6 @@
 package th.ac.kmitl.soa.group2.controllers;
 
+import io.vavr.control.Option;
 import lombok.val;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -27,8 +28,8 @@ public class TaxInvoiceController {
                 DocumentType.from(headerForm.typeCode).get().typeCode,
                 headerForm.typeCode,
                 headerForm.issuedAt,
-                "purpose",
-                headerForm.purposeCode.get(),
+                Option.some("purpose"),
+                headerForm.purposeCode,
                 headerForm.globalId,
                 new Timestamp(System.currentTimeMillis())
             )

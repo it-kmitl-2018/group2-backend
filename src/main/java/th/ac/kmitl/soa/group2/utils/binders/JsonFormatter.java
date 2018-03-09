@@ -13,7 +13,7 @@ public class JsonFormatter {
     public static <T> Option<T> deserialize(String json, Class<T> targetClass) {
         try {
             return Option.some(jsonMapper.readValue(json, targetClass));
-        } catch (IOException e) {
+        } catch (IOException exception) {
             return Option.none();
         }
     }

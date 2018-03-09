@@ -15,12 +15,12 @@ public class OptionDeserializer extends StdDeserializer<Option> {
 
     @Override
     public Option deserialize(JsonParser parser,
-                              DeserializationContext context) throws IOException {
+                              DeserializationContext context) {
         return Option.some("");
     }
 
     @Override
-    public Option getNullValue(DeserializationContext ctxt) {
+    public Option getNullValue(DeserializationContext context) {
         return Option.none();
     }
 

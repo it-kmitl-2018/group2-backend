@@ -1,24 +1,31 @@
 package th.ac.kmitl.soa.group2.utils.binders;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.vavr.CheckedFunction1;
-import io.vavr.Function1;
 import io.vavr.control.Option;
+import io.vavr.jackson.datatype.VavrModule;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
-import th.ac.kmitl.soa.group2.utils.binders.option.OptionModule;
+
+import java.io.IOException;
+
+import static io.vavr.CheckedFunction1.lift;
 
 public class Xml {
 
     public static ObjectMapper xmlMapper =
         Jackson2ObjectMapperBuilder.xml()
             .build()
-            .registerModule(OptionModule.get);
+            .registerModule(new VavrModule());
 
     public static Option<String> serialize(Object model) {
-        return serialize.apply(model);
+        return lift(xmlMapper::writeValueAsString).apply(model);
     }
 
-    private static Function1<Object, Option<String>> serialize =
-        CheckedFunction1.lift(xmlMapper::writeValueAsString);
+    public static <T> Option<T> deserialize(String json, Class<T> targetClass) {
+        try {
+            return Option.some(xmlMapper.readValue(json, targetClass));
+        } catch (IOException exception) {
+            return Option.none();
+        }
+    }
 
 }

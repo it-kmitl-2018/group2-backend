@@ -29,7 +29,7 @@ public class TaxInvoiceController {
                 headerForm.typeCode,
                 headerForm.issuedAt,
                 "can be created from purpose code", // TODO: create purpose code mapper
-                headerForm.purposeCode,
+                headerForm.purposeCode.get(),
                 headerForm.globalId,
                 new Timestamp(System.currentTimeMillis())
             )

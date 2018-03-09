@@ -1,5 +1,6 @@
 package th.ac.kmitl.soa.group2.forms;
 
+import io.vavr.control.Option;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -21,8 +22,7 @@ public class HeaderForm {
     @NotNull
     public String typeCode;
 
-    @NotNull
-    public String purposeCode;
+    public Option<String> purposeCode;
 
     @NotNull
     public Timestamp issuedAt;

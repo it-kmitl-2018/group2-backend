@@ -31,6 +31,7 @@ dependencies {
 	implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:${jacksonVersion}"
     implementation "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:${jacksonVersion}"
     implementation "io.vavr:vavr:${vavrVersion}"
+	implementation "io.vavr:vavr-jackson:${vavrVersion}"
     compileOnly "org.projectlombok:lombok:${lombokVersion}"
     testImplementation "org.springframework.boot:spring-boot-starter-test"
     testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"

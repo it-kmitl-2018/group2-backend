@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class HeaderModelTest {
 
-     public static final HeaderModel model =
+    public static  HeaderModel model =
         new HeaderModel(
             "RDTIV0575526000058001",
             "ใบกำกับภาษี",
@@ -22,7 +22,7 @@ public class HeaderModelTest {
             new Timestamp(1520396612035L)
         );
 
-     public static final String xml =
+    public static final String xml =
         "<rsm:ExchangedDocument>" +
             "<ram:ID>RDTIV0575526000058001</ram:ID>" +
             "<ram:Name>ใบกำกับภาษี</ram:Name>" +

@@ -5,8 +5,6 @@ import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import io.vavr.control.Option;
 
-import java.io.IOException;
-
 public class OptionDeserializer extends StdDeserializer<Option> {
 
     protected OptionDeserializer() {

@@ -16,9 +16,6 @@ public class Json {
             .build()
             .registerModule(OptionModule.get);
 
-    private static Function1<Object, Option<String>> serialize =
-        CheckedFunction1.lift(jsonMapper::writeValueAsString);
-
     public static Option<String> serialize(Object model) {
         return serialize.apply(model);
     }
@@ -30,5 +27,8 @@ public class Json {
             return Option.none();
         }
     }
+
+    private static Function1<Object, Option<String>> serialize =
+        CheckedFunction1.lift(jsonMapper::writeValueAsString);
 
 }

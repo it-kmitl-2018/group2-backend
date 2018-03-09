@@ -6,7 +6,7 @@ import th.ac.kmitl.soa.group2.definitions.DocumentType;
 import java.sql.Timestamp;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static th.ac.kmitl.soa.group2.utils.XmlFormatter.serialize;
+import static th.ac.kmitl.soa.group2.utils.binders.XmlFormatter.serialize;
 
 public class HeaderModelTest {
 

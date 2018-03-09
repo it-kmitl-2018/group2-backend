@@ -2,39 +2,39 @@ package th.ac.kmitl.soa.group2.models;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
-import lombok.RequiredArgsConstructor;
+import lombok.Value;
 
 import java.sql.Timestamp;
 
 import static th.ac.kmitl.soa.group2.definitions.XmlTags.*;
 
-@RequiredArgsConstructor()
+@Value
 @JacksonXmlRootElement(localName = EXCHANGED_DOCUMENT)
 public class HeaderModel {
 
     @JacksonXmlProperty(localName = ID)
-    public final String id;
+    String id;
 
     @JacksonXmlProperty(localName = NAME)
-    public final String name;
+    String name;
 
     @JacksonXmlProperty(localName = TYPE_CODE)
-    public final String typeCode;
+    String typeCode;
 
     @JacksonXmlProperty(localName = ISSUE_DATE_TIME)
-    public final Timestamp issuedAt;
+    Timestamp issuedAt;
 
     @JacksonXmlProperty(localName = PURPOSE)
-    public final String purpose;
+    String purpose;
 
     @JacksonXmlProperty(localName = PURPOSE_CODE)
-    public final String purposeCode;
+    String purposeCode;
 
     @JacksonXmlProperty(localName = GLOBAL_ID)
-    public final String globalId;
+    String globalId;
 
     @JacksonXmlProperty(localName = CREATION_DATE_TIME)
-    public final Timestamp createdAt;
+    Timestamp createdAt;
 
     // TODO: Add IncludedNote field
 

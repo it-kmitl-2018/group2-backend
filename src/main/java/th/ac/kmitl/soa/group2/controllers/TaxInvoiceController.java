@@ -20,7 +20,6 @@ public class TaxInvoiceController {
 
     @PostMapping(value = "/tax-invoice/generate")
     public Success<String> generate(@Valid @RequestBody TaxInvoiceForm taxInvoiceForm) {
-        // TODO: Require refactoring
         val headerForm = taxInvoiceForm.header;
         val taxInvoice = new TaxInvoiceModel(
             new HeaderModel(
@@ -28,7 +27,7 @@ public class TaxInvoiceController {
                 DocumentType.from(headerForm.typeCode).get().typeCode,
                 headerForm.typeCode,
                 headerForm.issuedAt,
-                "can be created from purpose code", // TODO: create purpose code mapper
+                "purpose",
                 headerForm.purposeCode.get(),
                 headerForm.globalId,
                 new Timestamp(System.currentTimeMillis())

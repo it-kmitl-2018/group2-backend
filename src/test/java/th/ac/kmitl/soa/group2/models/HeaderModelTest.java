@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class HeaderModelTest {
 
-    public static  HeaderModel model =
+    public static HeaderModel model =
         new HeaderModel(
             "RDTIV0575526000058001",
             "ใบกำกับภาษี",

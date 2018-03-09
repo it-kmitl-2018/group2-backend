@@ -1,6 +1,8 @@
 package th.ac.kmitl.soa.group2.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import com.fasterxml.jackson.datatype.jdk8.Jdk8Module;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
@@ -16,13 +18,20 @@ import java.util.List;
 @EnableWebMvc
 public class WebConfiguration extends WebMvcConfigurerAdapter {
 
+    public static ObjectMapper xmlMapper =
+        Jackson2ObjectMapperBuilder.xml()
+            .build()
+            .registerModule(new Jdk8Module())
+            .registerModule(OptionModule.get);
+
+    public static ObjectMapper jsonMapper =
+        Jackson2ObjectMapperBuilder.json()
+            .build()
+            .registerModule(OptionModule.get);
+
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
-        ObjectMapper jsonMapper = Jackson2ObjectMapperBuilder.json().build();
-        ObjectMapper xmlMapper = Jackson2ObjectMapperBuilder.xml().build();
-        converters.add(new MappingJackson2HttpMessageConverter(
-            jsonMapper.registerModule(OptionModule.get)
-        ));
+        converters.add(new MappingJackson2HttpMessageConverter(jsonMapper));
         converters.add(new MappingJackson2XmlHttpMessageConverter(xmlMapper));
     }
 

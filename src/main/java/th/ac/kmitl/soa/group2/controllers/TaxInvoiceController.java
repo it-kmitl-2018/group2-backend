@@ -9,11 +9,10 @@ import th.ac.kmitl.soa.group2.forms.HeaderForm;
 import th.ac.kmitl.soa.group2.forms.TaxInvoiceForm;
 import th.ac.kmitl.soa.group2.models.HeaderModel;
 import th.ac.kmitl.soa.group2.models.TaxInvoiceModel;
+import th.ac.kmitl.soa.group2.utils.binders.Xml;
 
 import javax.validation.Valid;
 import java.sql.Timestamp;
-
-import static th.ac.kmitl.soa.group2.utils.binders.XmlFormatter.serialize;
 
 @RestController
 public class TaxInvoiceController {
@@ -36,7 +35,7 @@ public class TaxInvoiceController {
             )
         );
 
-        return serialize(taxInvoice).map(Success::new).get();
+        return Xml.serialize(taxInvoice).map(Success::new).get();
     }
 
 }

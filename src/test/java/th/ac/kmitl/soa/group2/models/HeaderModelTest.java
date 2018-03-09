@@ -2,11 +2,11 @@ package th.ac.kmitl.soa.group2.models;
 
 import org.junit.jupiter.api.Test;
 import th.ac.kmitl.soa.group2.definitions.DocumentType;
+import th.ac.kmitl.soa.group2.utils.binders.Xml;
 
 import java.sql.Timestamp;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static th.ac.kmitl.soa.group2.utils.binders.XmlFormatter.serialize;
 
 public class HeaderModelTest {
 
@@ -36,7 +36,7 @@ public class HeaderModelTest {
 
     @Test
     public void shouldCreateCorrectXml() {
-        assertEquals(serialize(model).get(), xml);
+        assertEquals(Xml.serialize(model).get(), xml);
     }
 
 }

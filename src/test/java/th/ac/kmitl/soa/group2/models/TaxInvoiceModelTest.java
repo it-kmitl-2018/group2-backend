@@ -3,7 +3,7 @@ package th.ac.kmitl.soa.group2.models;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static th.ac.kmitl.soa.group2.utils.binders.XmlFormatter.serialize;
+import static th.ac.kmitl.soa.group2.utils.binders.Xml.serialize;
 
 public class TaxInvoiceModelTest {
 

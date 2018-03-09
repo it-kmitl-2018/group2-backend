@@ -16,6 +16,7 @@ public class OptionDeserializer extends StdDeserializer<Option> {
     @Override
     public Option deserialize(JsonParser parser,
                               DeserializationContext context) {
+        // NOT WORKING: cannot call default deserializer
         return Option.some("");
     }
 

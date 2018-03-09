@@ -1,17 +1,17 @@
 buildscript {
-	ext {
-		springBootVersion = '1.5.10.RELEASE'
-		junitVersion = '5.1.0'
-		lombokVersion = '1.16.20'
-		jacksonVersion = '2.9.4'
-		vavrVersion = '0.9.2'
-	}
-	repositories {
-		jcenter()
-	}
-	dependencies {
-		classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
-	}
+    ext {
+        springBootVersion = '1.5.10.RELEASE'
+        junitVersion = '5.1.0'
+        lombokVersion = '1.16.20'
+        jacksonVersion = '2.9.4'
+        vavrVersion = '0.9.2'
+    }
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+    }
 }
 
 apply plugin: 'java'
@@ -22,26 +22,26 @@ version = '0.1.0'
 sourceCompatibility = 1.8
 
 repositories {
-	jcenter()
+    jcenter()
 }
 
 dependencies {
-	implementation "org.springframework.boot:spring-boot-starter-web"
-	implementation "org.springframework.boot:spring-boot-devtools"
-	implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:${jacksonVersion}"
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation "org.springframework.boot:spring-boot-devtools"
+    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:${jacksonVersion}"
     implementation "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:${jacksonVersion}"
     implementation "io.vavr:vavr:${vavrVersion}"
-	implementation "io.vavr:vavr-jackson:${vavrVersion}"
+    implementation "io.vavr:vavr-jackson:${vavrVersion}"
     compileOnly "org.projectlombok:lombok:${lombokVersion}"
     testImplementation "org.springframework.boot:spring-boot-starter-test"
     testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
-	testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
 }
 
 test {
-	useJUnitPlatform()
-	dependsOn 'cleanTest'
-	testLogging {
-		events 'passed', 'skipped', 'failed'
-	}
+    useJUnitPlatform()
+    dependsOn 'cleanTest'
+    testLogging {
+        events 'passed', 'skipped', 'failed'
+    }
 }

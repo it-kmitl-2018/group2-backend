@@ -1,7 +1,6 @@
 package th.ac.kmitl.soa.group2.forms;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 

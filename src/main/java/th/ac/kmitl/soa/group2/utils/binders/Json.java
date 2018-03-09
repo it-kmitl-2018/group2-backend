@@ -4,14 +4,17 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.vavr.CheckedFunction1;
 import io.vavr.Function1;
 import io.vavr.control.Option;
-import th.ac.kmitl.soa.group2.utils.WebConfiguration;
+import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
+import th.ac.kmitl.soa.group2.utils.binders.option.OptionModule;
 
 import java.io.IOException;
 
-import static th.ac.kmitl.soa.group2.utils.WebConfiguration.jsonMapper;
-import static th.ac.kmitl.soa.group2.utils.WebConfiguration.xmlMapper;
-
 public class Json {
+
+    public static ObjectMapper jsonMapper =
+        Jackson2ObjectMapperBuilder.json()
+            .build()
+            .registerModule(OptionModule.get);
 
     private static Function1<Object, Option<String>> serialize =
         CheckedFunction1.lift(jsonMapper::writeValueAsString);

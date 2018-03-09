@@ -9,10 +9,11 @@ import th.ac.kmitl.soa.group2.forms.HeaderForm;
 import th.ac.kmitl.soa.group2.forms.TaxInvoiceForm;
 import th.ac.kmitl.soa.group2.models.HeaderModel;
 import th.ac.kmitl.soa.group2.models.TaxInvoiceModel;
-import th.ac.kmitl.soa.group2.utils.binders.Xml;
 
 import javax.validation.Valid;
 import java.sql.Timestamp;
+
+import static th.ac.kmitl.soa.group2.utils.binders.Xml.serialize;
 
 @RestController
 public class TaxInvoiceController {
@@ -27,15 +28,14 @@ public class TaxInvoiceController {
                 DocumentType.from(headerForm.typeCode).get().typeCode,
                 headerForm.typeCode,
                 headerForm.issuedAt,
-                // TODO: create purpose code mapper
-                "can be created from purpose code",
+                "can be created from purpose code", // TODO: create purpose code mapper
                 headerForm.purposeCode,
                 headerForm.globalId,
                 new Timestamp(System.currentTimeMillis())
             )
         );
 
-        return Xml.serialize(taxInvoice).map(Success::new).get();
+        return serialize(taxInvoice).map(Success::new).get();
     }
 
 }

@@ -26,14 +26,13 @@ repositories {
 }
 
 dependencies {
-	compile 'org.springframework.boot:spring-boot-starter-web'
-	compile 'org.springframework.boot:spring-boot-devtools'
-	compile "org.projectlombok:lombok:${lombokVersion}"
-	compile "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:${jacksonVersion}"
-	compile "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:${jacksonVersion}"
-	compile "io.vavr:vavr:${vavrVersion}"
-
-	testCompile 'org.springframework.boot:spring-boot-starter-test'
+	implementation "org.springframework.boot:spring-boot-starter-web"
+	implementation "org.springframework.boot:spring-boot-devtools"
+	implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:${jacksonVersion}"
+    implementation "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:${jacksonVersion}"
+    implementation "io.vavr:vavr:${vavrVersion}"
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    testImplementation "org.springframework.boot:spring-boot-starter-test"
     testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
 	testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
 }
@@ -42,6 +41,6 @@ test {
 	useJUnitPlatform()
 	dependsOn 'cleanTest'
 	testLogging {
-		events "passed", "skipped", "failed"
+		events 'passed', 'skipped', 'failed'
 	}
 }

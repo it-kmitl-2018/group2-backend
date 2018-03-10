@@ -2,21 +2,23 @@ package th.ac.kmitl.soa.group2.models;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import lombok.RequiredArgsConstructor;
 
-@JacksonXmlRootElement(localName = "rsm:ApplicableTradeTax")
+@RequiredArgsConstructor()
+@JacksonXmlRootElement(localName = "ram:ApplicableTradeTax")
 
-public class ApplicableTradeTaxModel {
+class ApplicableTradeTaxModel {
 
     @JacksonXmlProperty(localName = "ram:TypeCode")
-    public String typeCode;
+    public final String typeCode;
 
     @JacksonXmlProperty(localName = "ram:CalculatedRate")
-    public int calculatedRate;
+    public final int calculatedRate;
 
     @JacksonXmlProperty(localName = "ram:BasisAmount")
-    public float basisAmount;
+    public final float basisAmount;
 
     @JacksonXmlProperty(localName = "ram:CalculatedAmount")
-    public float calculatedAmount;
+    public final float calculatedAmount;
 
 }

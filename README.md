@@ -38,5 +38,7 @@ Download [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-do
 ./gradlew build
 ```
 
+\* Use `./gradlew.bat` in Windows
+
 # Convention
 Read our [CONVENTION.md](https://github.com/it-kmitl-2018/group2-backend/blob/develop/CONVENTION.md) 

@@ -23,10 +23,10 @@ public enum DocumentType {
     public final String description;
 
     public static Option<DocumentType> from(String typeCode) {
-        return getAllTypeCodes().find(documentType -> typeCode.equals(documentType.typeCode));
+        return getDocumentTypes().find($ -> $.typeCode.equals(typeCode));
     }
 
-    public static List<DocumentType> getAllTypeCodes() {
+    public static List<DocumentType> getDocumentTypes() {
         return List.of(DocumentType.values());
     }
 

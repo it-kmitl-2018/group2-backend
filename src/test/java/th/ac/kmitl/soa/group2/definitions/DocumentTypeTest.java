@@ -1,7 +1,6 @@
 package th.ac.kmitl.soa.group2.definitions;
 
 import org.junit.jupiter.api.Test;
-import th.ac.kmitl.soa.group2.definitions.DocumentType;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

@@ -2,14 +2,16 @@ package th.ac.kmitl.soa.group2.models;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import lombok.RequiredArgsConstructor;
 
+@RequiredArgsConstructor()
 @JacksonXmlRootElement(localName = "ram:DefinedTradeContact")
-public class DefinedTradeContactModel {
+class DefinedTradeContactModel {
 
     @JacksonXmlProperty(localName = "ram:PersonName")
-    public String personName;
+    public final String personName;
 
     @JacksonXmlProperty(localName = "ram:DepartmentName")
-    public String departmentName;
+    public final String departmentName;
 
 }

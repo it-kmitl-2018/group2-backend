@@ -1,27 +1,29 @@
 package th.ac.kmitl.soa.group2.models;
 
+import io.vavr.control.Option;
 import org.junit.jupiter.api.Test;
+import th.ac.kmitl.soa.group2.definitions.DocumentType;
+import th.ac.kmitl.soa.group2.utils.binders.Xml;
 
 import java.sql.Timestamp;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static th.ac.kmitl.soa.group2.utils.XmlFormatter.serialize;
 
-public class DocumentHeaderModelTest {
+public class HeaderModelTest {
 
-    private static final DocumentHeaderModel documentHeader =
-        new DocumentHeaderModel(
+    public static HeaderModel model =
+        new HeaderModel(
             "RDTIV0575526000058001",
             "ใบกำกับภาษี",
-            TypeCode.TAX_INVOICE.getTypeCode(),
+            DocumentType.TAX_INVOICE.typeCode,
             new Timestamp(1520396640256L),
-            "คำนวณราคาค่าบริการผิดพลาดสูงกว่าที่เป็นจริง",
-            "DCNS03",
-            "2.16.764.1.1.2.1.4.3.7",
+            Option.some("คำนวณราคาค่าบริการผิดพลาดสูงกว่าที่เป็นจริง"),
+            Option.some("DCNS03"),
+            Option.some("2.16.764.1.1.2.1.4.3.7"),
             new Timestamp(1520396612035L)
         );
 
-    private final String xml =
+    public static final String xml =
         "<rsm:ExchangedDocument>" +
             "<ram:ID>RDTIV0575526000058001</ram:ID>" +
             "<ram:Name>ใบกำกับภาษี</ram:Name>" +
@@ -35,7 +37,7 @@ public class DocumentHeaderModelTest {
 
     @Test
     public void shouldCreateCorrectXml() {
-        assertEquals(serialize(documentHeader).get(), xml);
+        assertEquals(Xml.serialize(model).get(), xml);
     }
 
 }

@@ -4,11 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Greetings {
+public class EtaxWebApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Greetings.class, args);
-		System.out.println("Hello, World");
+		SpringApplication.run(EtaxWebApplication.class, args);
 	}
 
 }

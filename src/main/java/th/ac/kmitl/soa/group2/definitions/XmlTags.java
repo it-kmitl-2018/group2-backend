@@ -12,5 +12,9 @@ public class XmlTags {
     public static final String PURPOSE_CODE = "ram:PurposeCode";
     public static final String GLOBAL_ID = "ram:GlobalID";
     public static final String CREATION_DATE_TIME = "ram:CreationDateTime";
+    public static final String INCLUDED_NOTE = "ram:IncludedNote";
+    public static final String SUBJECT = "ram:Subject";
+    public static final String CONTENT = "ram:Content";
+
 
 }

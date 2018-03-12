@@ -7,7 +7,8 @@ import static th.ac.kmitl.soa.group2.utils.binders.Xml.serialize;
 
 public class SpecifiedTradeAllowanceChargeModelTest {
 
-    private static final SpecifiedTradeAllowanceChargeModel specifiedTradeAllowanceCharge =
+    private static final SpecifiedTradeAllowanceChargeModel
+            specifiedTradeAllowanceCharge =
             new SpecifiedTradeAllowanceChargeModel(
                     false,
                     2500,

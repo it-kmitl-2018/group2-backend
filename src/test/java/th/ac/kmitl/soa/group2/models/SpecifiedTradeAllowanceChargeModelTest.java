@@ -20,7 +20,7 @@ public class SpecifiedTradeAllowanceChargeModelTest {
                     "<ram:ChargeIndicator>false</ram:ChargeIndicator>" +
                     "<ram:ActualAmount>2500</ram:ActualAmount>" +
                     "<ram:ReasonCode>95</ram:ReasonCode>" +
-                    "<ram:Reason>4413.50</ram:Reason>" +
+                    "<ram:Reason>ส่วนลดจากราคาปกติ</ram:Reason>" +
                     "</ram:SpecifiedTradeAllowanceCharge>";
 
     @Test

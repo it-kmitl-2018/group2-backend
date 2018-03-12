@@ -20,20 +20,25 @@ public class HeaderModelTest {
             Option.some("คำนวณราคาค่าบริการผิดพลาดสูงกว่าที่เป็นจริง"),
             Option.some("DCNS03"),
             Option.some("2.16.764.1.1.2.1.4.3.7"),
-            new Timestamp(1520396612035L)
+            new Timestamp(1520396612035L),
+            new HeaderNoteModel("หมายเหตุ", "เนื้อหา")
         );
 
     public static final String xml =
-        "<rsm:ExchangedDocument>" +
-            "<ram:ID>RDTIV0575526000058001</ram:ID>" +
-            "<ram:Name>ใบกำกับภาษี</ram:Name>" +
-            "<ram:TypeCode>388</ram:TypeCode>" +
-            "<ram:IssueDateTime>1520396640256</ram:IssueDateTime>" +
-            "<ram:Purpose>คำนวณราคาค่าบริการผิดพลาดสูงกว่าที่เป็นจริง</ram:Purpose>" +
-            "<ram:PurposeCode>DCNS03</ram:PurposeCode>" +
-            "<ram:GlobalID>2.16.764.1.1.2.1.4.3.7</ram:GlobalID>" +
-            "<ram:CreationDateTime>1520396612035</ram:CreationDateTime>" +
-        "</rsm:ExchangedDocument>";
+            "<rsm:ExchangedDocument>" +
+                    "<ram:ID>RDTIV0575526000058001</ram:ID>" +
+                    "<ram:Name>ใบกำกับภาษี</ram:Name>" +
+                    "<ram:TypeCode>388</ram:TypeCode>" +
+                    "<ram:IssueDateTime>1520396640256</ram:IssueDateTime>" +
+                    "<ram:Purpose>คำนวณราคาค่าบริการผิดพลาดสูงกว่าที่เป็นจริง</ram:Purpose>" +
+                    "<ram:PurposeCode>DCNS03</ram:PurposeCode>" +
+                    "<ram:GlobalID>2.16.764.1.1.2.1.4.3.7</ram:GlobalID>" +
+                    "<ram:CreationDateTime>1520396612035</ram:CreationDateTime>" +
+                    "<ram:IncludedNote>" +
+                        "<ram:Subject>หมายเหตุ</ram:Subject>" +
+                        "<ram:Content>เนื้อหา</ram:Content>" +
+                    "</ram:IncludedNote>"+
+            "</rsm:ExchangedDocument>";
 
     @Test
     public void shouldCreateCorrectXml() {

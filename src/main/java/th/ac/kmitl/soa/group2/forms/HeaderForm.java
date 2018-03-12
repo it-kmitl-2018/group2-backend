@@ -4,6 +4,7 @@ import io.vavr.control.Option;
 import lombok.NoArgsConstructor;
 import th.ac.kmitl.soa.group2.definitions.DocumentType;
 import th.ac.kmitl.soa.group2.models.HeaderModel;
+import th.ac.kmitl.soa.group2.models.HeaderNoteModel;
 import th.ac.kmitl.soa.group2.utils.Time;
 
 import javax.validation.constraints.NotNull;
@@ -29,6 +30,7 @@ public class HeaderForm implements BaseForm<HeaderModel> {
 
     @Override
     public HeaderModel toModel() {
+        HeaderNoteModel headerNoteModel = new HeaderNoteModel("หมายเหตุ", "เนื้อหา");
         return new HeaderModel(
             id,
             DocumentType.from(typeCode).get().typeCode,
@@ -37,7 +39,8 @@ public class HeaderForm implements BaseForm<HeaderModel> {
             Option.some("dummy purpose"),
             purposeCode,
             globalId,
-            Time.now()
+            Time.now(),
+            headerNoteModel
         );
     }
 

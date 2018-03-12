@@ -3,19 +3,22 @@ package th.ac.kmitl.soa.group2.models;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor()
 @JacksonXmlRootElement(localName = "ram:SpecifiedTradeAllowanceCharge")
 public class SpecifiedTradeAllowanceChargeModel {
 
     @JacksonXmlProperty(localName = "ram:ChargeIndicator")
-    public boolean chargeIndicatior;
+    public final boolean chargeIndicatior;
 
     @JacksonXmlProperty(localName = "ram:ActualAmount")
-    public float actualAmount;
+    public final float actualAmount;
 
     @JacksonXmlProperty(localName = "ram:ReasonCode")
-    public String reasonCode;
+    public final String reasonCode;
 
     @JacksonXmlProperty(localName = "ram:Reason")
-    public String Reason;
+    public final String reason;
 
 }

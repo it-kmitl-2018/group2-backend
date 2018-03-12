@@ -2,17 +2,20 @@ package th.ac.kmitl.soa.group2.models;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import lombok.RequiredArgsConstructor;
 
-@JacksonXmlRootElement(localName = "ram:SpecifiedTradeSettlementLineMonetarySummation")
-public class SpecifiedTradeSettlementLineMonetarySummationModel {
+@RequiredArgsConstructor
+@JacksonXmlRootElement
+        (localName = "ram:SpecifiedTradeSettlementLineMonetarySummation")
+class SpecifiedTradeSettlementLineMonetarySummationModel {
 
     @JacksonXmlProperty(localName = "ram:TaxTotalAmount")
-    public float taxTotalAmount;
+    public final float taxTotalAmount;
 
     @JacksonXmlProperty(localName = "ram:NetLineTotalAmount")
-    public float netLineTotalAmount;
+    public final float netLineTotalAmount;
 
     @JacksonXmlProperty(localName = "ram:NetIncludingTaxesLineTotalAmount")
-    public float netIncludingTaxesLineTotalAmount;
+    public final float netIncludingTaxesLineTotalAmount;
 
 }

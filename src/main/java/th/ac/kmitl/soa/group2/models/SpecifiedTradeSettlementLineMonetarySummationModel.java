@@ -6,7 +6,6 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @JacksonXmlRootElement
-        (localName = "ram:SpecifiedTradeSettlementLineMonetarySummation")
 class SpecifiedTradeSettlementLineMonetarySummationModel {
 
     @JacksonXmlProperty(localName = "ram:TaxTotalAmount")

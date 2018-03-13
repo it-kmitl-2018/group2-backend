@@ -12,8 +12,8 @@ public class SpecifiedTradeAllowanceChargeModelTest {
             new SpecifiedTradeAllowanceChargeModel(
                     false,
                     2500,
-                    95,
-                    ส่วนลดจากราคาปกติ
+                    "95",
+                    "ส่วนลดจากราคาปกติ"
             );
 
     private final String xml =

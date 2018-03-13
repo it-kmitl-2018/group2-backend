@@ -30,7 +30,6 @@ public class HeaderForm implements BaseForm<HeaderModel> {
 
     @Override
     public HeaderModel toModel() {
-        HeaderNoteModel headerNoteModel = new HeaderNoteModel("หมายเหตุ", "เนื้อหา");
         return new HeaderModel(
             id,
             DocumentType.from(typeCode).get().typeCode,
@@ -40,7 +39,7 @@ public class HeaderForm implements BaseForm<HeaderModel> {
             purposeCode,
             globalId,
             Time.now(),
-            headerNoteModel
+            new HeaderNoteModel("TODO: Subject", "TODO: Content")
         );
     }
 

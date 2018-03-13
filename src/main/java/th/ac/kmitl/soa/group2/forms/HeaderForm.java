@@ -16,7 +16,7 @@ public class HeaderForm implements BaseForm<HeaderModel> {
     public String id;
 
     @NotNull
-    public String typeCode;
+    public DocumentType documentType;
 
     @NotNull
     public Timestamp issuedAt;
@@ -31,8 +31,8 @@ public class HeaderForm implements BaseForm<HeaderModel> {
     public HeaderModel toModel() {
         return new HeaderModel(
             id,
-            DocumentType.from(typeCode).get().typeCode,
-            typeCode,
+            documentType.getName(),
+            documentType.typeCode,
             issuedAt,
             Option.some("dummy purpose"),
             purposeCode,

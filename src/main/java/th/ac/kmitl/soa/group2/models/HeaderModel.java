@@ -37,6 +37,7 @@ public class HeaderModel {
     @JacksonXmlProperty(localName = CREATION_DATE_TIME)
     Timestamp createdAt;
 
-    // TODO: Add IncludedNote field
+    @JacksonXmlProperty(localName = INCLUDED_NOTE)
+    HeaderNoteModel headerNoteModel;
 
 }

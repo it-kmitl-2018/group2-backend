@@ -7,7 +7,7 @@ import lombok.Value;
 
 import java.sql.Timestamp;
 
-import static th.ac.kmitl.soa.group2.definitions.XmlTags.*;
+import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.*;
 
 @Value
 @JacksonXmlRootElement(localName = EXCHANGED_DOCUMENT)

@@ -16,8 +16,8 @@ public enum DocumentType {
     TAX_INVOICE("388", "ใบกำกับภาษี", "Tax Invoice"),
     RECEIPT("T01", "ใบรับ", "Receipt"),
     INVOICE_AND_TAX_INVOICE("T02", "ใบแจ้งหนี้/ใบกำกับภาษี", "Invoice / Tax Invoice"),
-    RECEIPT_TAX_INVOICE("T03", "ใบเสร็จรับเงิน/ใบกํากับภาษี", "Receipt / Tax Invoice"),
-    DELIVERY_AND_TAX_INVOICE("T04", "ใบส่งของ/ใบกํากับภําษี", "Delivery order / Tax Invoice"),
+    RECEIPT_AND_TAX_INVOICE("T03", "ใบเสร็จรับเงิน/ใบกํากับภาษี", "Receipt / Tax Invoice"),
+    DELIVERY_ORDER_AND_TAX_INVOICE("T04", "ใบส่งของ/ใบกํากับภําษี", "Delivery order / Tax Invoice"),
     ABBREVIATED_TAX_INVOICE("T05", "ใบกํากับภาษีอย่างย่อ", "Abbreviated Tax Invoice"),
     RECEIPT_AND_ABBREVIATED_TAX_INVOICE("T06", "ใบเสร็จรับเงิน/ใบกํากับภาษีอย่างย่อ", "Receipt / Abbreviated Tax Invoice"),
     CANCELLATION_NOTE("T07", "ใบแจ้งยกเลิก", "Cancellation note");

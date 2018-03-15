@@ -26,8 +26,8 @@ public class DocumentTypeTest {
         assertEquals(DocumentType.TAX_INVOICE.typeCode, TAX_INVOICE_CODE);
         assertEquals(DocumentType.RECEIPT.typeCode, RECEIPT_CODE);
         assertEquals(DocumentType.INVOICE_AND_TAX_INVOICE.typeCode, INVOICE_AND_TAX_INVOICE_CODE);
-        assertEquals(DocumentType.RECEIPT_TAX_INVOICE.typeCode, RECEIPT_TAX_INVOICE_CODE);
-        assertEquals(DocumentType.DELIVERY_AND_TAX_INVOICE.typeCode, DELIVERY_AND_TAX_INVOICE_CODE);
+        assertEquals(DocumentType.RECEIPT_AND_TAX_INVOICE.typeCode, RECEIPT_TAX_INVOICE_CODE);
+        assertEquals(DocumentType.DELIVERY_ORDER_AND_TAX_INVOICE.typeCode, DELIVERY_AND_TAX_INVOICE_CODE);
         assertEquals(DocumentType.ABBREVIATED_TAX_INVOICE.typeCode, ABBREVIATED_TAX_INVOICE_CODE);
         assertEquals(DocumentType.RECEIPT_AND_ABBREVIATED_TAX_INVOICE.typeCode, RECEIPT_AND_ABBREVIATED_TAX_INVOICE_CODE);
         assertEquals(DocumentType.CANCELLATION_NOTE.typeCode, CANCELLATION_NOTE_CODE);

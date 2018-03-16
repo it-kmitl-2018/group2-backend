@@ -6,7 +6,7 @@ import lombok.Value;
 import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.COMPLETE_NUMBER;
 
 @Value
-public class TelephoneUniversalCommunicationModel {
+public class PhoneNumberModel {
 
         @JacksonXmlProperty(localName = COMPLETE_NUMBER)
         String completeNumber;

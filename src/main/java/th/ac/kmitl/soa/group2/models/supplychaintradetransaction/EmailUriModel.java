@@ -6,7 +6,7 @@ import lombok.Value;
 import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.URI_ID;
 
 @Value
-public class EmailUriUniversalCommunicationModel {
+public class EmailUriModel {
 
     @JacksonXmlProperty(localName = URI_ID)
     String uriId;

@@ -15,6 +15,7 @@ public class EtdaXmlTags {
     public static final String INCLUDED_NOTE = "ram:IncludedNote";
     public static final String SUBJECT = "ram:Subject";
     public static final String CONTENT = "ram:Content";
-
-
+    public static final String URI_ID = "ram:URIID";
+    public static final String COMPLETE_NUMBER = "ram:CompleteNumber";
+    
 }

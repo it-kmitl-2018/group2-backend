@@ -15,6 +15,8 @@ public class EtdaXmlTags {
     public static final String INCLUDED_NOTE = "ram:IncludedNote";
     public static final String SUBJECT = "ram:Subject";
     public static final String CONTENT = "ram:Content";
+    public static final String PERSON_NAME = "ram:PersonName";
+    public static final String DEPARTMENT_NAME = "ram:DepartmentName";
 
 
 }

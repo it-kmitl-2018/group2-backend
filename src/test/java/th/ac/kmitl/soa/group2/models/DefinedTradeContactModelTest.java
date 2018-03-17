@@ -14,10 +14,10 @@ public class DefinedTradeContactModelTest {
         );
 
     private final String xml =
-        "<ram:DefinedTradeContact>" +
+        "<DefinedTradeContactModel>" +
             "<ram:PersonName>ธารา ยืนขำ</ram:PersonName>" +
             "<ram:DepartmentName>marketing</ram:DepartmentName>" +
-        "</ram:DefinedTradeContact>";
+        "</DefinedTradeContactModel>";
 
     @Test
     public void shouldCreateCorrectXml() {

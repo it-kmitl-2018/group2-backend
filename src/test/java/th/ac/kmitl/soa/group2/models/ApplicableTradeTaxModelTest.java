@@ -15,13 +15,14 @@ public class ApplicableTradeTaxModelTest {
             4413.50F
         );
 
+
     private final String xml =
-        "<ram:ApplicableTradeTax>" +
+        "<ApplicableTradeTaxModel>" +
             "<ram:TypeCode>VAT</ram:TypeCode>" +
             "<ram:CalculatedRate>7</ram:CalculatedRate>" +
             "<ram:BasisAmount>63050.0</ram:BasisAmount>" +
             "<ram:CalculatedAmount>4413.5</ram:CalculatedAmount>" +
-        "</ram:ApplicableTradeTax>";
+        "</ApplicableTradeTaxModel>";
 
     @Test
     public void shouldCreateCorrectXml() {

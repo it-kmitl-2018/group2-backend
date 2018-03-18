@@ -8,12 +8,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class EmailUriModelTest {
 
     private static final EmailUriModel
-            emailUriUniversalCommunication = new EmailUriModel("2312ZXS13");
+        emailUriUniversalCommunication = new EmailUriModel("2312ZXS13");
 
     private final String xml =
-            "<EmailUriModel>"+
-                    "<ram:URIID>2312ZXS13</ram:URIID>" +
-            "</EmailUriModel>";
+        "<EmailUriModel>"+
+            "<ram:URIID>2312ZXS13</ram:URIID>" +
+        "</EmailUriModel>";
 
     @Test
     public void shouldCreateCorrectXml(){

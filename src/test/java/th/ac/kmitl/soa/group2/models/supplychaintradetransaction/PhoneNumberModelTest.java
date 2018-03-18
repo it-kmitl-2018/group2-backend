@@ -9,11 +9,9 @@ public class PhoneNumberModelTest {
 
     private final String phoneNumber = "0812345678";
     private final String xml =
-            "<PhoneNumberModel><" +
-                    "ram:CompleteNumber>" +
-                        "0812345678" +
-                    "</ram:CompleteNumber>" +
-            "</PhoneNumberModel>";
+        "<PhoneNumberModel>" +
+            "<ram:CompleteNumber>" + phoneNumber + "</ram:CompleteNumber>" +
+        "</PhoneNumberModel>";
 
     @Test
     public void shoudBeCorrectPhoneNumber() {

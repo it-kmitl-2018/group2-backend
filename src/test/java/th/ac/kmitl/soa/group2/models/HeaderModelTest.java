@@ -26,19 +26,16 @@ public class HeaderModelTest {
             new HeaderNoteModel("หมายเหตุ", "เนื้อหา")
         );
 
-    public static final String xml =
-        tag(ID, "RDTIV0575526000058001") +
-        tag(NAME, "ใบกำกับภาษี") +
-        tag(TYPE_CODE, "388") +
-        tag(ISSUE_DATE_TIME, "1520396640256") +
-        tag(PURPOSE, "คำนวณราคาค่าบริการผิดพลาดสูงกว่าที่เป็นจริง") +
-        tag(PURPOSE_CODE, "DCNS03") +
-        tag(GLOBAL_ID, "2.16.764.1.1.2.1.4.3.7") +
-        tag(CREATION_DATE_TIME, "1520396612035") +
-        tag(INCLUDED_NOTE,
-            tag(SUBJECT, "หมายเหตุ") +
-            tag(CONTENT, "เนื้อหา")
-        );
+    public static String xml =
+        tag(ID, "RDTIV0575526000058001")
+        + tag(NAME, "ใบกำกับภาษี")
+        + tag(TYPE_CODE, "388")
+        + tag(ISSUE_DATE_TIME, "1520396640256")
+        + tag(PURPOSE, "คำนวณราคาค่าบริการผิดพลาดสูงกว่าที่เป็นจริง")
+        + tag(PURPOSE_CODE, "DCNS03")
+        + tag(GLOBAL_ID, "2.16.764.1.1.2.1.4.3.7")
+        + tag(CREATION_DATE_TIME, "1520396612035")
+        + tag(INCLUDED_NOTE, HeaderNoteModelTest.xml);
 
     @Test
     public void shouldCreateCorrectXml() {

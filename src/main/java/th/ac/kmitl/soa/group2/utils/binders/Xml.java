@@ -45,8 +45,8 @@ public class Xml {
         }
     }
 
-    public static String tag(String tag, String content) {
-        return String.format("<%s>%s</%s>", tag, content, tag);
+    public static String tag(String name, String body) {
+        return String.format("<%s>%s</%s>", name, body, name);
     }
 
 }

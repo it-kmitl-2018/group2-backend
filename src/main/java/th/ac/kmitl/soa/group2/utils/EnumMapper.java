@@ -16,8 +16,8 @@ public class EnumMapper {
         return List.of(targetEnum.getEnumConstants());
     }
 
-    public static <T, U> Map<U, T> mapBy(Function1<T, U> resolver, Traversable<T> tarversable) {
-        return tarversable.toMap($ -> Tuple.of(resolver.apply($), $));
+    public static <T, U> Map<U, T> mapBy(Function1<T, U> resolver, Traversable<T> traversable) {
+        return traversable.toMap($ -> Tuple.of(resolver.apply($), $));
     }
 
 }

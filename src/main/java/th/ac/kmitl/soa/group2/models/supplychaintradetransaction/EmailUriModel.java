@@ -9,6 +9,6 @@ import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.URI_ID;
 public class EmailUriModel {
 
     @JacksonXmlProperty(localName = URI_ID)
-    String uriId;
+    String uri;
 
 }

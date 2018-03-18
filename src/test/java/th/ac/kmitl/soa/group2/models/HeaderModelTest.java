@@ -7,6 +7,8 @@ import th.ac.kmitl.soa.group2.definitions.DocumentType;
 import java.sql.Timestamp;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.*;
+import static th.ac.kmitl.soa.group2.utils.binders.Xml.tag;
 import static th.ac.kmitl.soa.group2.utils.binders.Xml.serializeWithoutRoot;
 
 public class HeaderModelTest {
@@ -25,18 +27,18 @@ public class HeaderModelTest {
         );
 
     public static final String xml =
-        "<ram:ID>RDTIV0575526000058001</ram:ID>" +
-        "<ram:Name>ใบกำกับภาษี</ram:Name>" +
-        "<ram:TypeCode>388</ram:TypeCode>" +
-        "<ram:IssueDateTime>1520396640256</ram:IssueDateTime>" +
-        "<ram:Purpose>คำนวณราคาค่าบริการผิดพลาดสูงกว่าที่เป็นจริง</ram:Purpose>" +
-        "<ram:PurposeCode>DCNS03</ram:PurposeCode>" +
-        "<ram:GlobalID>2.16.764.1.1.2.1.4.3.7</ram:GlobalID>" +
-        "<ram:CreationDateTime>1520396612035</ram:CreationDateTime>" +
-        "<ram:IncludedNote>" +
-            "<ram:Subject>หมายเหตุ</ram:Subject>" +
-            "<ram:Content>เนื้อหา</ram:Content>" +
-        "</ram:IncludedNote>";
+        tag(ID, "RDTIV0575526000058001") +
+        tag(NAME, "ใบกำกับภาษี") +
+        tag(TYPE_CODE, "388") +
+        tag(ISSUE_DATE_TIME, "1520396640256") +
+        tag(PURPOSE, "คำนวณราคาค่าบริการผิดพลาดสูงกว่าที่เป็นจริง") +
+        tag(PURPOSE_CODE, "DCNS03") +
+        tag(GLOBAL_ID, "2.16.764.1.1.2.1.4.3.7") +
+        tag(CREATION_DATE_TIME, "1520396612035") +
+        tag(INCLUDED_NOTE,
+            tag(SUBJECT, "หมายเหตุ") +
+            tag(CONTENT, "เนื้อหา")
+        );
 
     @Test
     public void shouldCreateCorrectXml() {

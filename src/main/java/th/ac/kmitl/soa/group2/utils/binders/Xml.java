@@ -18,7 +18,6 @@ public class Xml {
     public static ObjectMapper xmlMapper =
         Jackson2ObjectMapperBuilder.xml()
             .build()
-            .enable(SerializationFeature.WRAP_ROOT_VALUE)
             .registerModule(new VavrModule());
 
     public static Option<String> serialize(Object model) {
@@ -46,8 +45,8 @@ public class Xml {
         }
     }
 
-    public static void main(String[] args) {
-        println(removeXmlRoot("<title><html>what's inside</html></title>"));
+    public static String tag(String tag, String content) {
+        return String.format("<%s>%s</%s>", tag, content, tag);
     }
 
 }

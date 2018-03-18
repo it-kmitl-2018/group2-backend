@@ -12,9 +12,7 @@ public class XmlTest {
 
     @Value
     private class root {
-
         String child;
-
     }
 
     private String xml =

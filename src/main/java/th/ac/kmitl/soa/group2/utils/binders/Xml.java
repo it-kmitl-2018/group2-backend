@@ -1,7 +1,6 @@
 package th.ac.kmitl.soa.group2.utils.binders;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
 import io.vavr.control.Option;
 import io.vavr.jackson.datatype.VavrModule;
 import lombok.val;
@@ -10,7 +9,6 @@ import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 import java.io.IOException;
 import java.util.regex.Pattern;
 
-import static io.vavr.API.println;
 import static io.vavr.CheckedFunction1.lift;
 
 public class Xml {

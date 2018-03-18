@@ -1,7 +1,6 @@
 package th.ac.kmitl.soa.group2.models;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import io.vavr.control.Option;
 import lombok.Value;
 

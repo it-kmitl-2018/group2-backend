@@ -5,8 +5,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.CROSS_INDUSTRY_INVOICE;
 import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.EXCHANGED_DOCUMENT;
-import static th.ac.kmitl.soa.group2.utils.binders.Xml.tag;
 import static th.ac.kmitl.soa.group2.utils.binders.Xml.serialize;
+import static th.ac.kmitl.soa.group2.utils.binders.Xml.tag;
 
 public class TaxInvoiceModelTest {
 

@@ -8,8 +8,8 @@ import java.sql.Timestamp;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.*;
-import static th.ac.kmitl.soa.group2.utils.binders.Xml.tag;
 import static th.ac.kmitl.soa.group2.utils.binders.Xml.serializeWithoutRoot;
+import static th.ac.kmitl.soa.group2.utils.binders.Xml.tag;
 
 public class HeaderModelTest {
 

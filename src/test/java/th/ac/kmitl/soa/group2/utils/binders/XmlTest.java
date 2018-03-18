@@ -4,9 +4,7 @@ import lombok.Value;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static th.ac.kmitl.soa.group2.utils.binders.Xml.removeXmlRoot;
-import static th.ac.kmitl.soa.group2.utils.binders.Xml.serializeWithoutRoot;
-import static th.ac.kmitl.soa.group2.utils.binders.Xml.tag;
+import static th.ac.kmitl.soa.group2.utils.binders.Xml.*;
 
 public class XmlTest {
 

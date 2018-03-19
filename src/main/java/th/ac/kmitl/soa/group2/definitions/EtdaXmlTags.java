@@ -17,7 +17,5 @@ public class EtdaXmlTags {
     public static final String CONTENT = "ram:Content";
     public static final String URI_ID = "ram:URIID";
     public static final String COMPLETE_NUMBER = "ram:CompleteNumber";
-    public static final String TELEPHONE_UNIVERSAL_COMMUNICATION = "ram:TelephoneUniversalCommunication";
-    public static final String EMAIL_URI_UNIVERSAL_COMMUNICATION = "ram:EmailURIUniversalCommunication";
 
 }

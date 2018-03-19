@@ -11,9 +11,9 @@ public class EmailUriModelTest {
     private static final EmailUriModel model = new EmailUriModel(email);
 
     private final String xml =
-        "<EmailUriModel>"+
+        "<ram:EmailURIUniversalCommunication>"+
             "<ram:URIID>"+ email + "</ram:URIID>" +
-        "</EmailUriModel>";
+        "</ram:EmailURIUniversalCommunication>";
 
     @Test
     public void shouldCreateCorrectXml(){

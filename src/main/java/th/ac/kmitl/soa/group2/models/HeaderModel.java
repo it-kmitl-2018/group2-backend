@@ -1,7 +1,6 @@
 package th.ac.kmitl.soa.group2.models;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import io.vavr.control.Option;
 import lombok.Value;
 
@@ -10,7 +9,6 @@ import java.sql.Timestamp;
 import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.*;
 
 @Value
-@JacksonXmlRootElement(localName = EXCHANGED_DOCUMENT)
 public class HeaderModel {
 
     @JacksonXmlProperty(localName = ID)

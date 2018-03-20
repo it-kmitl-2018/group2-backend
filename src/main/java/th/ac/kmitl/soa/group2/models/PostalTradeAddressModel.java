@@ -5,12 +5,9 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import io.vavr.control.Option;
 import lombok.Value;
 
-import java.sql.Timestamp;
-
-import static th.ac.kmitl.soa.group2.definitions.XmlTags.*;
+import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.*;
 
 @Value
-@JacksonXmlRootElement(localName = POSTAL_TRADE_ADDRESS)
 public class PostalTradeAddressModel {
 
     @JacksonXmlProperty(localName = POSTCODE_CODE)

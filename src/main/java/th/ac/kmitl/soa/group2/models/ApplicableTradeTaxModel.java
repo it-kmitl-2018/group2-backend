@@ -1,6 +1,7 @@
 package th.ac.kmitl.soa.group2.models;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import io.vavr.control.Option;
 import lombok.Value;
 
 import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.*;
@@ -15,9 +16,9 @@ class ApplicableTradeTaxModel {
     int calculatedRate;
 
     @JacksonXmlProperty(localName = BASIS_AMOUNT)
-    float basisAmount;
+    Option<Float> basisAmount;
 
     @JacksonXmlProperty(localName = CALCULATE_AMOUNT)
-    float calculatedAmount;
+    Option<Float> calculatedAmount;
 
 }

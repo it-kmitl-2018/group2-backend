@@ -15,6 +15,13 @@ public class EtdaXmlTags {
     public static final String INCLUDED_NOTE = "ram:IncludedNote";
     public static final String SUBJECT = "ram:Subject";
     public static final String CONTENT = "ram:Content";
-
+    public static final String ORIGINAL_INFORMATION_AMOUNT = "ram:OriginalInformationAmount";
+    public static final String LINE_TOTAL_AMOUNT = "ram:LineTotalAmount";
+    public static final String DIFFERENCE_INFORMATION_AMOUNT = "ram:DifferenceInformationAmount";
+    public static final String ALLOWANCE_TOTAL_AMOUNT = "ram:AllowanceTotalAmount";
+    public static final String CHARGE_TOTAL_AMOUNT = "ram:ChargeTotalAmount";
+    public static final String TAX_BASIS_TOTAL_AMOUNT = "ram:TaxBasisTotalAmount";
+    public static final String TAX_TOTAL_AMOUNT = "ram:TaxTotalAmount";
+    public static final String GRAND_TOTAL_AMOUNT = "ram:GrandTotalAmount";
 
 }

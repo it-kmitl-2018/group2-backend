@@ -1,9 +1,12 @@
 package th.ac.kmitl.soa.group2.models;
 
+import io.vavr.control.Option;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static th.ac.kmitl.soa.group2.utils.binders.Xml.serialize;
+import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.*;
+import static th.ac.kmitl.soa.group2.utils.binders.Xml.serializeWithoutRoot;
+import static th.ac.kmitl.soa.group2.utils.binders.Xml.tag;
 
 public class SpecifiedTradeAllowanceChargeModelTest {
 
@@ -13,20 +16,18 @@ public class SpecifiedTradeAllowanceChargeModelTest {
             false,
             2500,
             "95",
-            "ส่วนลดจากราคาปกติ"
+            Option.some("ส่วนลดจากราคาปกติ")
         );
 
     private final String xml =
-        "<SpecifiedTradeAllowanceChargeModel>" +
-            "<ram:ChargeIndicator>false</ram:ChargeIndicator>" +
-            "<ram:ActualAmount>2500.0</ram:ActualAmount>" +
-            "<ram:ReasonCode>95</ram:ReasonCode>" +
-            "<ram:Reason>ส่วนลดจากราคาปกติ</ram:Reason>" +
-        "</SpecifiedTradeAllowanceChargeModel>";
+            tag(CHARGE_INDICATOR, "false")
+            + tag(ACTUAL_AMOUNT, "2500.0")
+            + tag(REASON_CODE, "95")
+            + tag(REASON, "ส่วนลดจากราคาปกติ");
 
     @Test
     public void shouldCreateCorrectXml() {
-        assertEquals(serialize(specifiedTradeAllowanceCharge).get(), xml);
+        assertEquals(serializeWithoutRoot(specifiedTradeAllowanceCharge).get(), xml);
     }
 
 }

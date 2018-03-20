@@ -16,5 +16,11 @@ public class EtdaXmlTags {
     public static final String SUBJECT = "ram:Subject";
     public static final String CONTENT = "ram:Content";
 
+    //SpecifiedTradeAllowanceCharge XML Tags
+    public static final String SP_TRADE_ALLOWANCE_CHARGE = "ram:SpecifiedTradeAllowanceCharge";
+    public static final String CHARGE_INDICATOR = "ram:ChargeIndicator";
+    public static final String ACTUAL_AMOUNT = "ram:ActualAmount";
+    public static final String REASON = "ram:Reason";
+    public static final String REASON_CODE = "ram:ReasonCode";
 
 }

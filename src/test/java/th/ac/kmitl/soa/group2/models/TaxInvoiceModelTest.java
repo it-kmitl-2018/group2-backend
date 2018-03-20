@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.CROSS_INDUSTRY_INVOICE;
 import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.EXCHANGED_DOCUMENT;
+import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.EXCHANGED_DOCUMENT_CONTEXT;
 import static th.ac.kmitl.soa.group2.utils.binders.Xml.serialize;
 import static th.ac.kmitl.soa.group2.utils.binders.Xml.tag;
 
@@ -12,12 +13,14 @@ public class TaxInvoiceModelTest {
 
     public static final TaxInvoiceModel model =
         new TaxInvoiceModel(
+            ContextModel.withDefault(),
             HeaderModelTest.model
         );
 
     public static final String xml =
         tag(CROSS_INDUSTRY_INVOICE,
-            tag(EXCHANGED_DOCUMENT, HeaderModelTest.xml)
+            tag(EXCHANGED_DOCUMENT_CONTEXT, ContextModelTest.xml)
+            + tag(EXCHANGED_DOCUMENT, HeaderModelTest.xml)
         );
 
     @Test

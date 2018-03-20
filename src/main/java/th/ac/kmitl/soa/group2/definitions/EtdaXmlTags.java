@@ -15,8 +15,6 @@ public class EtdaXmlTags {
     public static final String INCLUDED_NOTE = "ram:IncludedNote";
     public static final String SUBJECT = "ram:Subject";
     public static final String CONTENT = "ram:Content";
-
-    //xml from model PostalTradeAddress
     public static final String POSTAL_TRADE_ADDRESS = "ram:PostalTradeAddress";
     public static final String POSTCODE_CODE = "ram:PostcodeCode";
     public static final String BUILDING_NAME = "ram:BuildingName";

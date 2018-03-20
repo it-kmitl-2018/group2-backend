@@ -4,9 +4,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import lombok.Value;
 
-import static th.ac.kmitl.soa.group2.definitions.XmlTags.CONTENT;
-import static th.ac.kmitl.soa.group2.definitions.XmlTags.INCLUDED_NOTE;
-import static th.ac.kmitl.soa.group2.definitions.XmlTags.SUBJECT;
+import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.*;
 
 @Value
 @JacksonXmlRootElement(localName = INCLUDED_NOTE)

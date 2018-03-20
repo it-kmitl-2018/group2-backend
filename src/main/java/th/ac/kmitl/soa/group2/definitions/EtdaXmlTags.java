@@ -1,6 +1,6 @@
 package th.ac.kmitl.soa.group2.definitions;
 
-public class XmlTags {
+public class EtdaXmlTags {
 
     public static final String CROSS_INDUSTRY_INVOICE = "rsm:CrossIndustryInvoice";
     public static final String EXCHANGED_DOCUMENT = "rsm:ExchangedDocument";

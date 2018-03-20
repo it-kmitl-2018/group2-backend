@@ -4,8 +4,8 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import lombok.Value;
 
-import static th.ac.kmitl.soa.group2.definitions.XmlTags.CROSS_INDUSTRY_INVOICE;
-import static th.ac.kmitl.soa.group2.definitions.XmlTags.EXCHANGED_DOCUMENT;
+import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.CROSS_INDUSTRY_INVOICE;
+import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.EXCHANGED_DOCUMENT;
 
 @Value
 @JacksonXmlRootElement(localName = CROSS_INDUSTRY_INVOICE)

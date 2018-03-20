@@ -1,21 +1,31 @@
-### Generated ###
+# Generated File
 build/
 out/
 
-### Java ###
+# Compiled Class File
 *.class
-*.jar
 
-### Gradle ###
+# Package File
+*.jar
+*.war
+*.ear
+*.zip
+*.rar
+*.tar.gz
+
+# Gradle
 .gradle
 !gradle/wrapper/gradle-wrapper.jar
 
-### IntelliJ IDEA ###
+# IntelliJ IDEA
 .idea
 *.iws
 *.iml
 *.ipr
 
-### macOS ###
+# Vim
+*.swp
+
+# macOS
 .DS_Store
 

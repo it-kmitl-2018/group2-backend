@@ -3,6 +3,8 @@ package th.ac.kmitl.soa.group2.definitions;
 public class EtdaXmlTags {
 
     public static final String CROSS_INDUSTRY_INVOICE = "rsm:CrossIndustryInvoice";
+    public static final String EXCHANGED_DOCUMENT_CONTEXT = "rsm:ExchangedDocumentContext";
+    public static final String GUIDELINE_SPECIFIED_DOCUMENT_CONTEXT_PARAMETER = "ram:GuidelineSpecifiedDocumentContextParameter";
     public static final String EXCHANGED_DOCUMENT = "rsm:ExchangedDocument";
     public static final String ID = "ram:ID";
     public static final String NAME = "ram:Name";

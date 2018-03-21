@@ -10,7 +10,6 @@ import th.ac.kmitl.soa.group2.utils.Time;
 import javax.validation.constraints.NotNull;
 import java.sql.Timestamp;
 
-@NoArgsConstructor
 public class HeaderForm implements BaseForm<HeaderModel> {
 
     @NotNull

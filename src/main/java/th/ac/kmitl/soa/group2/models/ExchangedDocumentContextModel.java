@@ -9,7 +9,7 @@ import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.*;
 import static th.ac.kmitl.soa.group2.definitions.EtdaXmlParameters.*;
 
 @Value
-public class ContextModel {
+public class ExchangedDocumentContextModel {
 
     @Value
     private class Scheme {
@@ -29,12 +29,12 @@ public class ContextModel {
     @JacksonXmlProperty(localName = ID)
     Wrapper<Scheme> scheme;
 
-    public ContextModel(String id, String agencyId, String versionId) {
+    public ExchangedDocumentContextModel(String id, String agencyId, String versionId) {
         this.scheme = Wrapper.of(new Scheme(id, agencyId, versionId));
     }
 
-    public static ContextModel withDefault() {
-        return new ContextModel(
+    public static ExchangedDocumentContextModel withDefault() {
+        return new ExchangedDocumentContextModel(
             DEFAULT_SCHEME_ID,
             DEFAULT_SCHEME_AGENCY_ID,
             DEFAULT_SCHEME_VERSION_ID

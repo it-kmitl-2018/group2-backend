@@ -13,13 +13,13 @@ public class TaxInvoiceModelTest {
 
     public static final TaxInvoiceModel model =
         new TaxInvoiceModel(
-            ContextModel.withDefault(),
+            ExchangedDocumentContextModel.withDefault(),
             HeaderModelTest.model
         );
 
     public static final String xml =
         tag(CROSS_INDUSTRY_INVOICE,
-            tag(EXCHANGED_DOCUMENT_CONTEXT, ContextModelTest.xml)
+            tag(EXCHANGED_DOCUMENT_CONTEXT, ExchangedDocumentContextModelTest.xml)
             + tag(EXCHANGED_DOCUMENT, HeaderModelTest.xml)
         );
 

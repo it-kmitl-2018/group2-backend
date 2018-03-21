@@ -13,7 +13,7 @@ import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.EXCHANGED_DOCUMENT_
 public class TaxInvoiceModel {
 
     @JacksonXmlProperty(localName = EXCHANGED_DOCUMENT_CONTEXT)
-    ContextModel context;
+    ExchangedDocumentContextModel context;
 
     @JacksonXmlProperty(localName = EXCHANGED_DOCUMENT)
     HeaderModel header;

@@ -1,6 +1,6 @@
 package th.ac.kmitl.soa.group2.forms;
 
-import th.ac.kmitl.soa.group2.models.ContextModel;
+import th.ac.kmitl.soa.group2.models.ExchangedDocumentContextModel;
 import th.ac.kmitl.soa.group2.models.TaxInvoiceModel;
 
 import javax.validation.Valid;
@@ -14,7 +14,7 @@ public class TaxInvoiceForm implements BaseForm<TaxInvoiceModel> {
     @Override
     public TaxInvoiceModel toModel() {
         return new TaxInvoiceModel(
-            ContextModel.withDefault(),
+            ExchangedDocumentContextModel.withDefault(),
             header.toModel()
         );
     }

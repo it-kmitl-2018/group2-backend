@@ -7,10 +7,10 @@ import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.*;
 import static th.ac.kmitl.soa.group2.utils.binders.Xml.serializeWithoutRoot;
 import static th.ac.kmitl.soa.group2.utils.binders.Xml.tag;
 
-public class ContextModelTest {
+public class ExchangedDocumentContextModelTest {
 
-    public static final ContextModel model =
-        ContextModel.withDefault();
+    public static final ExchangedDocumentContextModel model =
+        ExchangedDocumentContextModel.withDefault();
 
     public static final String xml =
         tag(GUIDELINE_SPECIFIED_DOCUMENT_CONTEXT_PARAMETER,

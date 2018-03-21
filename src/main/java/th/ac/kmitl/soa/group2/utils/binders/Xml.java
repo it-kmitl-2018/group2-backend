@@ -47,4 +47,8 @@ public class Xml {
         return String.format("<%s>%s</%s>", name, body, name);
     }
 
+    public static String tag(String name, Double body) {
+        return String.format("<%s>%s</%s>", name, body, name);
+    }
+
 }

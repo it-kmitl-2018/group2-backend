@@ -22,6 +22,8 @@ public class EtdaXmlTags {
     public static final String ACTUAL_AMOUNT = "ram:ActualAmount";
     public static final String REASON = "ram:Reason";
     public static final String REASON_CODE = "ram:ReasonCode";
+    public static final String PERSON_NAME = "ram:PersonName";
+    public static final String DEPARTMENT_NAME = "ram:DepartmentName";
     public static final String CALCULATED_RATE = "ram:CalculatedRate";
     public static final String BASIS_AMOUNT = "ram:BasisAmount";
     public static final String CALCULATE_AMOUNT = "ram:CalculatedAmount";

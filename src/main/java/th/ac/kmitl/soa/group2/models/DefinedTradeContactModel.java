@@ -1,17 +1,19 @@
 package th.ac.kmitl.soa.group2.models;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
-import lombok.RequiredArgsConstructor;
+import io.vavr.control.Option;
+import lombok.Value;
 
-@RequiredArgsConstructor()
-@JacksonXmlRootElement(localName = "ram:DefinedTradeContact")
+import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.DEPARTMENT_NAME;
+import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.PERSON_NAME;
+
+@Value
 class DefinedTradeContactModel {
 
-    @JacksonXmlProperty(localName = "ram:PersonName")
-    public final String personName;
+    @JacksonXmlProperty(localName = PERSON_NAME)
+    Option<String> personName;
 
-    @JacksonXmlProperty(localName = "ram:DepartmentName")
-    public final String departmentName;
+    @JacksonXmlProperty(localName = DEPARTMENT_NAME)
+    Option<String> departmentName;
 
 }

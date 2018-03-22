@@ -1,9 +1,12 @@
 package th.ac.kmitl.soa.group2.models;
 
+import io.vavr.control.Option;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static th.ac.kmitl.soa.group2.utils.binders.Xml.serialize;
+import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.*;
+import static th.ac.kmitl.soa.group2.utils.binders.Xml.serializeWithoutRoot;
+import static th.ac.kmitl.soa.group2.utils.binders.Xml.tag;
 
 public class ApplicableTradeTaxModelTest {
 
@@ -11,21 +14,18 @@ public class ApplicableTradeTaxModelTest {
         new ApplicableTradeTaxModel(
             "VAT",
             7,
-            63050,
-            4413.50F
+            Option.some(63050.00F),
+            Option.some(4413.50F)
         );
 
-    private final String xml =
-        "<ram:ApplicableTradeTax>" +
-            "<ram:TypeCode>VAT</ram:TypeCode>" +
-            "<ram:CalculatedRate>7</ram:CalculatedRate>" +
-            "<ram:BasisAmount>63050.0</ram:BasisAmount>" +
-            "<ram:CalculatedAmount>4413.5</ram:CalculatedAmount>" +
-        "</ram:ApplicableTradeTax>";
+    private static String xml =
+            tag(TYPE_CODE, "VAT")
+            +tag(CALCULATED_RATE, "7")
+            +tag(BASIS_AMOUNT, "63050.0")
+            +tag(CALCULATE_AMOUNT, "4413.5");
 
     @Test
     public void shouldCreateCorrectXml() {
-        assertEquals(serialize(applicableTradeTax).get(), xml);
+        assertEquals(serializeWithoutRoot(applicableTradeTax).get(), xml);
     }
-
 }

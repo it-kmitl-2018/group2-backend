@@ -17,6 +17,9 @@ public class EtdaXmlTags {
     public static final String INCLUDED_NOTE = "ram:IncludedNote";
     public static final String SUBJECT = "ram:Subject";
     public static final String CONTENT = "ram:Content";
+    public static final String CALCULATED_RATE = "ram:CalculatedRate";
+    public static final String BASIS_AMOUNT = "ram:BasisAmount";
+    public static final String CALCULATE_AMOUNT = "ram:CalculatedAmount";
     public static final String ORIGINAL_INFORMATION_AMOUNT = "ram:OriginalInformationAmount";
     public static final String LINE_TOTAL_AMOUNT = "ram:LineTotalAmount";
     public static final String DIFFERENCE_INFORMATION_AMOUNT = "ram:DifferenceInformationAmount";

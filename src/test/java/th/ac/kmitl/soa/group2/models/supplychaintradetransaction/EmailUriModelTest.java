@@ -3,20 +3,20 @@ package th.ac.kmitl.soa.group2.models.supplychaintradetransaction;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.COMPLETE_NUMBER;
+import static th.ac.kmitl.soa.group2.definitions.EtdaXmlTags.URI_ID;
 import static th.ac.kmitl.soa.group2.utils.binders.Xml.serializeWithoutRoot;
 import static th.ac.kmitl.soa.group2.utils.binders.Xml.tag;
 
-public class PhoneNumberModelTest {
+public class EmailUriModelTest {
 
-    private final String phoneNumber = "0812345678";
+    private static final String email = "abc@xyz.com";
 
-    private final PhoneNumberModel model = new PhoneNumberModel(phoneNumber);
+    private static final EmailUriModel model = new EmailUriModel(email);
 
-    private final String xml = tag(COMPLETE_NUMBER, phoneNumber);
+    private final String xml = tag(URI_ID, email);
 
     @Test
-    public void shoudBeCorrectPhoneNumber() {
+    public void shouldCreateCorrectXml(){
         assertEquals(serializeWithoutRoot(model).get(), xml);
     }
 }

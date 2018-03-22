@@ -39,5 +39,7 @@ public class EtdaXmlTags {
     public static final String COUNTRY_ID = "ram:CountryID";
     public static final String COUNTRY_SUB_DIVISION_ID = "ram:CountrySubDivisionID";
     public static final String BUILDING_NUMBER = "ram:BuildingNumber";
+    public static final String URI_ID = "ram:URIID";
+    public static final String COMPLETE_NUMBER = "ram:CompleteNumber";
 
 }

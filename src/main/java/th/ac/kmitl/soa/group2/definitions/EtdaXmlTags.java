@@ -17,6 +17,11 @@ public class EtdaXmlTags {
     public static final String INCLUDED_NOTE = "ram:IncludedNote";
     public static final String SUBJECT = "ram:Subject";
     public static final String CONTENT = "ram:Content";
+    public static final String SP_TRADE_ALLOWANCE_CHARGE = "ram:SpecifiedTradeAllowanceCharge";
+    public static final String CHARGE_INDICATOR = "ram:ChargeIndicator";
+    public static final String ACTUAL_AMOUNT = "ram:ActualAmount";
+    public static final String REASON = "ram:Reason";
+    public static final String REASON_CODE = "ram:ReasonCode";
     public static final String PERSON_NAME = "ram:PersonName";
     public static final String DEPARTMENT_NAME = "ram:DepartmentName";
     public static final String CALCULATED_RATE = "ram:CalculatedRate";

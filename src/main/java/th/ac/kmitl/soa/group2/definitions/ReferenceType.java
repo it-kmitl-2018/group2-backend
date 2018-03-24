@@ -36,5 +36,5 @@ public enum ReferenceType {
     public static ReferenceType decode(String refCode) {
         return mapper.get(refCode).get();
     }
-    
+
 }

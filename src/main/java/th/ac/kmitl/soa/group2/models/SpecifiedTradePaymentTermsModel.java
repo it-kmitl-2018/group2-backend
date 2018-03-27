@@ -18,6 +18,6 @@ public class SpecifiedTradePaymentTermsModel {
         Option<String> description;
 
         @JacksonXmlProperty(localName = DUE_DATE_TIME)
-        String deuDateTime;
-        
+        String dueDateTime;
+
 }

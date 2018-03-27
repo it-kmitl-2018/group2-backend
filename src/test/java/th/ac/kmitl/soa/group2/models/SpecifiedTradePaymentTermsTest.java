@@ -27,4 +27,5 @@ public class SpecifiedTradePaymentTermsTest {
     public void shouldCreateCorrectXml() {
         assertEquals(serializeWithoutRoot(SpecifiedTradePaymentTerms).get(), xml);
     }
+    
 }

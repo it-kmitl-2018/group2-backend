@@ -36,6 +36,8 @@ public class EtdaXmlTags {
     public static final String LINE_TOTAL_AMOUNT = "ram:LineTotalAmount";
     public static final String LINE_TWO = "ram:LineTwo";
     public static final String NAME = "ram:Name";
+    public static final String NET_LINE_TOTAL_AMOUNT = "ram:NetLineTotalAmount";
+    public static final String NET_INCLUDING_TAXES_LINE_TOTAL_AMOUNT = "ram:NetIncludingTaxesLineTotalAmount";
     public static final String ORIGINAL_INFORMATION_AMOUNT = "ram:OriginalInformationAmount";
     public static final String PERSON_NAME = "ram:PersonName";
     public static final String POSTAL_TRADE_ADDRESS = "ram:PostalTradeAddress";

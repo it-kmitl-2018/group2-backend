@@ -53,5 +53,7 @@ public class EtdaXmlTags {
     public static final String TAX_TOTAL_AMOUNT = "ram:TaxTotalAmount";
     public static final String TYPE_CODE = "ram:TypeCode";
     public static final String URI_ID = "ram:URIID";
+    public static final String DESCRIPTION = "ram:Description";
+    public static final String DUE_DATE_TIME = "ram:DueDateTime";
 
 }

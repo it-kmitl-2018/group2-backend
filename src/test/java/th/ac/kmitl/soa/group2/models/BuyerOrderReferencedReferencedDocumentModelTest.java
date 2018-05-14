@@ -16,12 +16,14 @@ public class BuyerOrderReferencedReferencedDocumentModelTest {
     public static BuyerOrderReferencedReferencedDocumentModel model =
         new BuyerOrderReferencedReferencedDocumentModel(
             "ABCDEFGHIJKLMNOPQRST123456789012345",
-            new Timestamp(1520396640256L)
+            new Timestamp(1520396640256L),
+            "ALT"
         );
 
     public static String xml =
         tag(ISSUE_ASSIGNED_ID, "ABCDEFGHIJKLMNOPQRST123456789012345")
-        + tag(ISSUE_DATE_TIME, "1520396640256");
+        + tag(ISSUE_DATE_TIME, "1520396640256")
+        + tag(REFERENCE_TYPE_CODE, "ALT");
 
     @Test
     public void shouldCreateCorrectXml() {

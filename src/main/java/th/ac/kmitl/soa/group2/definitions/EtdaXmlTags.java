@@ -28,6 +28,7 @@ public class EtdaXmlTags {
     public static final String GUIDELINE_SPECIFIED_DOCUMENT_CONTEXT_PARAMETER = "ram:GuidelineSpecifiedDocumentContextParameter";
     public static final String ID = "ram:ID";
     public static final String INCLUDED_NOTE = "ram:IncludedNote";
+    public static final String ISSUE_ASSIGNED_ID = "ram:IssuerAssignedID";
     public static final String ISSUE_DATE_TIME = "ram:IssueDateTime";
     public static final String LINE_FIVE = "ram:LineFive";
     public static final String LINE_FOUR = "ram:LineFour";

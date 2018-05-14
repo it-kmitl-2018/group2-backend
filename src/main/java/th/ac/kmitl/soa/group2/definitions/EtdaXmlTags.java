@@ -13,6 +13,8 @@ public class EtdaXmlTags {
     public static final String CHARGE_TOTAL_AMOUNT = "ram:ChargeTotalAmount";
     public static final String CITY_NAME = "ram:CityName";
     public static final String CITY_SUB_DIVISION_NAME = "ram:CitySubDivisionName";
+    public static final String CLASS_CODE = "ram:ClassCode";
+    public static final String CLASS_NAME = "ram:ClassName";
     public static final String COMPLETE_NUMBER = "ram:CompleteNumber";
     public static final String CONTENT = "ram:Content";
     public static final String COUNTRY_ID = "ram:CountryID";

@@ -17,4 +17,7 @@ public class BuyerOrderReferencedReferencedDocumentModel {
         @JacksonXmlProperty(localName = ISSUE_DATE_TIME)
         Timestamp issuedAt;
 
+        @JacksonXmlProperty(localName = REFERENCE_TYPE_CODE)
+        String referenceTypeCode;
+
 }

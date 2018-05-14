@@ -47,6 +47,7 @@ public class EtdaXmlTags {
     public static final String PURPOSE_CODE = "ram:PurposeCode";
     public static final String REASON = "ram:Reason";
     public static final String REASON_CODE = "ram:ReasonCode";
+    public static final String REFERENCE_TYPE_CODE = "ram:ReferenceTypeCode";
     public static final String SP_TRADE_ALLOWANCE_CHARGE = "ram:SpecifiedTradeAllowanceCharge";
     public static final String STREET_NAME = "ram:StreetName";
     public static final String SUBJECT = "ram:Subject";
